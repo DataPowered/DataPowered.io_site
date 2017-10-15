@@ -13,7 +13,7 @@ We're a couple of data / research enthusiasts.
 
 <img src="https://avatars3.githubusercontent.com/u/1380272?s=460&v=4" width="200" height="200" style="float: left; margin-right: 15px;" />
 
-David has a background in game design. He likes to play Dishonored2, but is not as good at it as Lex. 
+David has a background in game design. He likes to play Dishonored2 and helps Lex out with the hard bits. 
 
 Check out his posts [here](../author/david/).
 
