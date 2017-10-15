@@ -3,24 +3,36 @@
 
 {{ if .Site.Params.Show_read_time }}{{ .ReadingTime }} min read&nbsp;&nbsp;{{ end }}
 
-{{ if isset .Params "categories" }}
-    {{ $categoriesLen := len .Params.categories }}
-    {{ if gt $categoriesLen 0 }}
+{{ if isset .Params "category" }}
+    {{ $categoryLen := len .Params.category }}
+    {{ if gt $categoryLen 0 }}
         <i class="fa fa-folder"></i>&nbsp;&nbsp;
-        {{ range $k, $v := .Params.categories }}
-        <a class="article-category-link" href="{{ $.Site.BaseURL }}categories/{{ . | urlize | lower }}">{{ . }}</a>
-        {{ if lt $k (sub $categoriesLen 1) }}&middot;{{ end }}
+        {{ range $k, $v := .Params.category }}
+        <a class="article-category-link" href="{{ $.Site.BaseURL }}category/{{ . | urlize | lower }}">{{ . }}</a>
+        {{ if lt $k (sub $categoryLen 1) }}&middot;{{ end }}
         {{ end }}
     {{ end }}
 {{ end }}
 
-{{ if isset .Params "tags" }}
-   {{ $tagsLen := len .Params.tags }}
-   {{ if gt $tagsLen 0 }}
-       &nbsp;&nbsp;<i class="fa fa-tags"></i>&nbsp;&nbsp;
-       {{ range $k, $v := .Params.tags }}
-       <a class="article-category-link" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower }}">{{ . }}</a>
-       {{ if lt $k (sub $tagsLen 1) }}&middot;{{ end }}
+{{ if isset .Params "tag" }}
+   {{ $tagLen := len .Params.tag }}
+   {{ if gt $tagLen 0 }}
+       &nbsp;&nbsp;<i class="fa fa-tag"></i>&nbsp;&nbsp;
+       {{ range $k, $v := .Params.tag }}
+       <a class="article-category-link" href="{{ $.Site.BaseURL }}tag/{{ . | urlize | lower }}">{{ . }}</a>
+       {{ if lt $k (sub $tagLen 1) }}&middot;{{ end }}
        {{ end }}
    {{ end }}
 {{ end }}
+
+{{ if isset .Params "author" }}
+    {{ $authorsLen := len .Params.author }}
+    {{ if gt $authorsLen 0 }}
+        {{ range $k, $v := .Params.author }}
+	<br/>        
+	<a class="article-category-link" href="{{ $.Site.BaseURL }}author/{{ . | urlize | lower }}">Author: {{ . }}</a>
+        {{ if lt $k (sub $authorsLen 1) }}&middot;{{ end }}
+        {{ end }}
+    {{ end }}
+{{ end }}
+

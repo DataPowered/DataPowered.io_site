@@ -1,7 +1,9 @@
 +++
 date = "2017-10-14T22:56:26+01:00"
 draft = false
-title = "second"
+title = "Here we go again"
+tag = ["bayes", "tech"]
+author = ["Lex"]
 
 +++
 
