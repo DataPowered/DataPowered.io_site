@@ -2,9 +2,9 @@ baseurl = "/"
 languageCode = "en-us"
 title = "DataPowered"
 theme = "hugo-strata-theme"
-disqusShortname = "spf13"
+disqusShortname = "datapowered-io"
 # Enable Google Analytics by inserting your tracking code
-googleAnalytics = ""
+googleAnalytics = "UA-108142750-1"
 # Define how many posts should appear on a site
 paginate = 10
 
