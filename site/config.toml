@@ -8,6 +8,8 @@ googleAnalytics = "UA-108142750-1"
 # Define how many posts should appear on a site
 paginate = 10
 
+PygmentsStyle = "native"
+
 [params]
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
@@ -125,6 +127,10 @@ paginate = 10
 		tags = "tag"
 		categories = "category"
 		authors = "author"
+
+
+
+
 
 # Menu links that appear on the left sidebar
 [[menu.main]]
