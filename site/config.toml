@@ -128,16 +128,16 @@ paginate = 10
 
 # Menu links that appear on the left sidebar
 [[menu.main]]
-	name = "Home"
+	name = "Homepage"
 	url  = "/"
 	weight = 10
 
 [[menu.main]]
-  	name = "About"
+  	name = "About us"
     	url  = "about"
     	weight = 5
 
 [[menu.main]]
-	name = "Blog"
+	name = "DataPowered blog"
 	url  = "post/"
 	weight = 0
