@@ -3,7 +3,7 @@ date = "2017-10-18"
 draft = false
 title = "Data guidelines: A set of recommendations for clean and usable data"
 tag = ["data cleaning"]
-author = ["Lex"]
+author = ["Caterina"]
 +++
 
 > This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/data-guidelines).

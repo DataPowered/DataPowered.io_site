@@ -2,9 +2,8 @@
 date = "2017-10-18"
 draft = false
 title = "LA maps of crime: Using R to map criminal activity in LA since 2010"
-
 tag = ["R", "ggplot2", "ggmap"]
-author = ["Lex"]
+author = ["Caterina"]
 +++
 
 > This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/la-maps-of-crime).
