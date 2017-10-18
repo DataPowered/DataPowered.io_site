@@ -72,17 +72,17 @@ PygmentsStyle = "native"
 			title = "Friends of DataPowered"
 			description = "Check them out."
 
-		[[params.portfolio.gallery]]
-			image = "fulls/03.jpg"
-			thumb = "thumbs/03.jpg"
-			title = "Favourite Tools"
-			description = "Data Viz, Analysis, and more."
-
-		[[params.portfolio.gallery]]
-			image = "fulls/04.jpg"
-			thumb = "thumbs/04.jpg"
-			title = "Friends of DataPowered"
-			description = "Check them out."
+#		[[params.portfolio.gallery]]
+#			image = "fulls/03.jpg"
+#			thumb = "thumbs/03.jpg"
+#			title = "Favourite Tools"
+#			description = "Data Viz, Analysis, and more."
+#
+#		[[params.portfolio.gallery]]
+#			image = "fulls/04.jpg"
+#			thumb = "thumbs/04.jpg"
+#			title = "Friends of DataPowered"
+#			description = "Check them out."
 
 
 	[params.recentposts]
@@ -92,7 +92,7 @@ PygmentsStyle = "native"
 	[params.contact]
 		hide  = false
 		title = "Get In Touch"
-		content = "Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor."
+		content = "Any ideas, suggestions or just curious about us? You know what to do."
 
 		# This can be exact coordinates or a searchable address in google maps
 		gmaps_address = "55.953251,-3.188267"
@@ -136,14 +136,14 @@ PygmentsStyle = "native"
 [[menu.main]]
 	name = "Homepage"
 	url  = "/"
-	weight = 10
+	weight = 5
 
 [[menu.main]]
   	name = "About us"
     	url  = "about"
-    	weight = 5
+    	weight = 0
 
 [[menu.main]]
 	name = "DataPowered blog"
 	url  = "post/"
-	weight = 0
+	weight = 10
