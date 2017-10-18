@@ -12,7 +12,7 @@ PygmentsStyle = "native"
 
 [params]
 	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
+	# information about you and your website.
 	name = "Your name"
 	description = "Describe your website"
 
@@ -31,7 +31,7 @@ PygmentsStyle = "native"
 		# Replace the avatar with a picture of your own under static/images
 		avatar = "avatar.jpg"
 		# Use Markdown to format the string. This works nearly all over the theme
-		# bio = "**We're DataPowered**, <br> a fun place to share code <br> and explore data."
+		bio = "**DataPowered.io**"
 		# The icons will be shown if you enter your username
 		twitter = ""
 		github = "DataPowered"
@@ -51,39 +51,26 @@ PygmentsStyle = "native"
 
 	[params.about]
 		hide  = false
-		title = "**We're DataPowered**"
-		content = "A fun place to share code and explore data."
+		title = "**We're DataPowered.**"
+		content = "A fun place to share code and explore data"
 
 	[params.portfolio]
 		hide  = false
-		title = "Get to know us"
+		title = "Get to know us:"
 
 		# The images and thumbnails are stored under static/images
 		# Create and change subfolders as you like
 		[[params.portfolio.gallery]]
-			image = "fulls/01.jpg"
-			thumb = "thumbs/01.jpg"
-			title = "Favourite Tools"
-			description = "Data Viz, Analysis, and more."
+			image = "fulls/R_Unity.png"
+			thumb = "thumbs/R_Unity.png"
+			title = "Favourite tools & experience:<br/> data vis, analysis, and more"
+			description = "[RStudio](https://www.rstudio.com/) &nbsp;&nbsp; | &nbsp;&nbsp; [Unity](https://unity3d.com/)"
 
 		[[params.portfolio.gallery]]
-			image = "fulls/02.jpg"
-			thumb = "thumbs/02.jpg"
-			title = "Friends of DataPowered"
-			description = "Check them out."
-
-#		[[params.portfolio.gallery]]
-#			image = "fulls/03.jpg"
-#			thumb = "thumbs/03.jpg"
-#			title = "Favourite Tools"
-#			description = "Data Viz, Analysis, and more."
-#
-#		[[params.portfolio.gallery]]
-#			image = "fulls/04.jpg"
-#			thumb = "thumbs/04.jpg"
-#			title = "Friends of DataPowered"
-#			description = "Check them out."
-
+			image = "fulls/edin.png"
+			thumb = "thumbs/edin.png"
+			title = "Friends of<br/> DataPowered"
+			description = "[EdinbR](http://edinbr.org) &nbsp;&nbsp;| &nbsp;&nbsp; [The Data Lab](www.thedatalab.com) &nbsp;&nbsp; | &nbsp;&nbsp; [The Data Team @ The Data Lab](https://thedatateam.silvrback.com/)"
 
 	[params.recentposts]
 		hide  = false
