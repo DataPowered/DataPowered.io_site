@@ -16,15 +16,11 @@ Using information like the date and time of a crime, its location (longitude & l
 
 Here's a contents list to help you navigate through this post:
 
-[Step 1: Getting necessary packages and data](#PackagesAndData) 
-
-[Step 2: Cleaning the data](#DataCleaning) 
-
-[Step 3: Getting a Google Map](#GetMap) 
-
-[Step 4: Building plots incrementally](#IncrementalPlots) 
-
-[Step 5: Using Google Maps API to extract location data](#GoogleMapsAPI) 
+* [Step 1: Getting necessary packages and data](#PackagesAndData) 
+* [Step 2: Cleaning the data](#DataCleaning) 
+* [Step 3: Getting a Google Map](#GetMap) 
+* [Step 4: Building plots incrementally](#IncrementalPlots) 
+* [Step 5: Using Google Maps API to extract location data](#GoogleMapsAPI) 
 	
 ---
 
