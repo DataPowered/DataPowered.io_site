@@ -20,15 +20,10 @@ Of the three sources, below we'll explore the BBC dataset ("BBC Summary of World
 Here's a contents list to help you navigate through this post:
 
 * [Overview of the data](#DataOverview) 
-
 * [Finding a suitable level of granularity](#DataAggregation) 
-
 * [Plotting the full data](#PlottingFullData) 
-
 * [Plotting slices of data](#PlottingSlicesOfData) 
-
 * [Using animations to map extra dimensions](#UsingAnimations) 
-
 * [Going further: Data cleaning & manipulations](#DataCleaningAndManipulations) 
 	
 ---
