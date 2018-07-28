@@ -51,12 +51,12 @@ PygmentsStyle = "native"
 
 	[params.about]
 		hide  = false
-		title = "**We're DataPowered.**"
+		title = "**This is DataPowered.**"
 		content = "A fun place to share code and explore data"
 
 	[params.portfolio]
 		hide  = false
-		title = "Get to know us:"
+		title = "Find out more:"
 
 		# The images and thumbnails are stored under static/images
 		# Create and change subfolders as you like
@@ -64,13 +64,13 @@ PygmentsStyle = "native"
 			image = "fulls/R_Unity.png"
 			thumb = "thumbs/R_Unity.png"
 			title = "Favourite tools & experience:<br/> data vis, analysis, and more"
-			description = "[RStudio](https://www.rstudio.com/) &nbsp;&nbsp; | &nbsp;&nbsp; [Unity](https://unity3d.com/)"
+			description = "[RStudio](https://www.rstudio.com/) &nbsp;&nbsp;"
 
 		[[params.portfolio.gallery]]
 			image = "fulls/edin.png"
 			thumb = "thumbs/edin.png"
 			title = "Friends of<br/> DataPowered"
-			description = "[EdinbR](http://edinbr.org) &nbsp;&nbsp;| &nbsp;&nbsp; [The Data Lab](www.thedatalab.com) &nbsp;&nbsp; | &nbsp;&nbsp; [The Data Team @ The Data Lab](https://thedatateam.silvrback.com/)"
+			description = "[EdinbR](http://edinbr.org) &nbsp;&nbsp;| &nbsp;&nbsp; [The Data Lab](https://www.thedatalab.com) &nbsp;&nbsp; | &nbsp;&nbsp; [The Data Team @ The Data Lab](https://thedatateam.silvrback.com/)"
 
 	[params.recentposts]
 		hide  = false
@@ -78,8 +78,8 @@ PygmentsStyle = "native"
 
 	[params.contact]
 		hide  = false
-		title = "Get In Touch"
-		content = "Any ideas, suggestions or just curious about us? You know what to do."
+		title = "Get in Touch"
+		content = "Any ideas, suggestions or just curious? You know what to do."
 
 		# This can be exact coordinates or a searchable address in google maps
 		gmaps_address = "55.953251,-3.188267"
@@ -126,7 +126,7 @@ PygmentsStyle = "native"
 	weight = 5
 
 [[menu.main]]
-  	name = "About us"
+  	name = "About me"
     	url  = "about"
     	weight = 0
 
