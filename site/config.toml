@@ -69,13 +69,13 @@ PygmentsStyle = "native"
             image = "fulls/edin.png"
         	thumb = "thumbs/edin.png"
         	title = "Friends of<br/> DataPowered"
-        	description = "[EdinbR](http://edinbr.org) &nbsp;&nbsp;| &nbsp;&nbsp; [The Data Lab](https://www.thedatalab.com) &nbsp;&nbsp; | &nbsp;&nbsp; [R-bloggers](https://www.r-bloggers.com/)"
+        	description = "[EdinbR](http://edinbr.org) &nbsp;&nbsp;| &nbsp;&nbsp; [The Data Lab](https://www.thedatalab.com) &nbsp;&nbsp; | &nbsp;&nbsp; [R-bloggers](https://www.r-bloggers.com/) &nbsp;&nbsp;| &nbsp;&nbsp; [The R Foundation](https://www.r-project.org/foundation/)"
 
 		[[params.portfolio.gallery]]
 			image = "fulls/RStudio_Curtis_Visit_Stickers.jpg"
 			thumb = "thumbs/RStudio_Curtis_Visit_Stickers.jpg"
 			title = "Favourite tools & experience:<br/> data vis, analysis, and more"
-			description = "[RStudio](https://www.rstudio.com/) &nbsp;&nbsp;| &nbsp;&nbsp; [The R Foundation](https://www.r-project.org/foundation/)"
+			description = "[RStudio](https://www.rstudio.com/) &nbsp;&nbsp;| &nbsp;&nbsp; [CRAN](https://cran.r-project.org/)"
 
 
 
