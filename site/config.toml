@@ -52,7 +52,7 @@ PygmentsStyle = "native"
 	[params.about]
 		hide  = false
 		title = "**This is DataPowered.**"
-		content = "A fun place to share code and explore tools & data. <br/><br/> This is the homepage and blog of Dr Caterina Constantinescu, Data Scientist at The Data Lab Innovation Centre. <br/> For more about me, see [here](http://datapowered.io/about/)."
+		content = "A fun place to share code and explore tools & data. <br/><br/> This is the homepage and blog of Dr Caterina Constantinescu, Data Scientist @ The Data Lab Innovation Centre. <br/> For more about me, see [here](http://datapowered.io/about/)."
 
 
 	[params.recentposts]
@@ -72,10 +72,10 @@ PygmentsStyle = "native"
         	description = "[EdinbR](http://edinbr.org) &nbsp;&nbsp;| &nbsp;&nbsp; [The Data Lab](https://www.thedatalab.com) &nbsp;&nbsp; | &nbsp;&nbsp; [The Data Team @ The Data Lab](https://thedatateam.silvrback.com/)"
 
 		[[params.portfolio.gallery]]
-			image = "fulls/R_Unity.png"
-			thumb = "thumbs/R_Unity.png"
+			image = "fulls/RStudio_Curtis_Visit_Stickers.jpg"
+			thumb = "thumbs/RStudio_Curtis_Visit_Stickers.jpg"
 			title = "Favourite tools & experience:<br/> data vis, analysis, and more"
-			description = "[RStudio](https://www.rstudio.com/) &nbsp;&nbsp;"
+			description = "[RStudio](https://www.rstudio.com/) &nbsp;&nbsp;| &nbsp;&nbsp; [The R Foundation](https://www.r-project.org/foundation/)"
 
 
 

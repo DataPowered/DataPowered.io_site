@@ -4,8 +4,6 @@
     <list default="true" id="ee5c46fc-43de-4f26-a565-275f75d768a8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/site/config.toml" beforeDir="false" afterPath="$PROJECT_DIR$/site/config.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/content/.Rhistory" beforeDir="false" afterPath="$PROJECT_DIR$/site/content/.Rhistory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site/layouts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/site/layouts/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -66,17 +64,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site/config.toml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+            <state relative-caret-position="420">
+              <caret line="69" column="36" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/layouts/index.html">
+        <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="273">
+              <caret line="118" column="43" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -87,6 +85,7 @@
     <findStrings>
       <find>about</find>
       <find>recent blo</find>
+      <find>png</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,6 +148,24 @@
             <path>
               <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
               <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="fulls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -156,6 +173,20 @@
               <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="datasets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="graphics" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
@@ -175,6 +206,36 @@
               <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
               <item name="layouts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="imports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -219,12 +280,12 @@
       <workItem from="1534600158477" duration="9580000" />
       <workItem from="1534633719474" duration="4286000" />
       <workItem from="1534639857904" duration="102000" />
-      <workItem from="1534671946294" duration="3076000" />
+      <workItem from="1534671946294" duration="6178000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40536000" />
+    <option name="totallyTimeSpent" value="43638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1030" extended-state="6" />
@@ -358,13 +419,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site/layouts/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/site/content/post/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -375,10 +429,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/site/layouts/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="118" column="43" selection-start-line="118" selection-start-column="40" selection-end-line="118" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/site/config.toml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="58" column="21" lean-forward="true" selection-start-line="58" selection-start-column="21" selection-end-line="58" selection-end-column="21" />
+        <state relative-caret-position="420">
+          <caret line="69" column="36" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="36" />
         </state>
       </provider>
     </entry>
