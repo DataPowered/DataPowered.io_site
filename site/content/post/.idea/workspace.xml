@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d1593a39-7405-4cf9-bbf7-03448334e640" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md" beforeDir="false" afterPath="$PROJECT_DIR$/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md" afterDir="false" />
-    </list>
+    <list default="true" id="d1593a39-7405-4cf9-bbf7-03448334e640" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -19,7 +15,7 @@
     <session id="860262557">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.32" value="1" />
           <entry key="project.open.time.38" value="1" />
@@ -150,16 +146,15 @@
       <workItem from="1532735363200" duration="194000" />
       <workItem from="1532735679644" duration="1080000" />
       <workItem from="1532793096625" duration="118000" />
-      <workItem from="1534664185840" duration="6890000" />
+      <workItem from="1534664185840" duration="7341000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8282000" />
+    <option name="totallyTimeSpent" value="8733000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1030" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49944505" visible="true" weight="0.14865577" />
       <window_info id="Structure" order="1" sideWeight="0.5005549" side_tool="true" weight="0.14865577" />

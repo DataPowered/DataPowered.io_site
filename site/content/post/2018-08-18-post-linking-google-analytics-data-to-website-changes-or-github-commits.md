@@ -117,3 +117,7 @@ You'll find the resulting plot at the <a href="#top">top of this post</a>.
 ### 5. Going further
 
 A good way to take this further would be to have a think about what sorts of events could meaningfully be tied to changes in views (given a certain lag). This may be more than website updates, and might also include things like networking (e.g., if people come across your site when searching for you online after having met you). Importing your Google Calendar could come in handy here, so you might want to check out R packages like [googlecalendar](https://rdrr.io/github/benjcunningham/googlecalendar/api/) and [gcalendar](https://github.com/jdeboer/gcalendar).
+
+You can get my full R code [here](https://github.com/DataPowered/DataPowered.io_site/blob/master/site/content/Rscripts/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.R) and explore things further.
+
+<br/>
