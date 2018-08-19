@@ -97,7 +97,10 @@ names( single_event_index ) <- c( "Event", "Date", "Description" )
 
 
 
-# pdf( "./graphics/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits/ViewsVsTimeWithCommitLabels.pdf", 14, 6 )
+png( "./graphics/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits/ViewsVsTimeWithCommitLabels.png",
+     width = 14,
+     height = 6, 
+     units = "in", res = 200 )
 
 ggplot( data = views_time_events,
                 aes( x = Date, y = cumsum( UniquePageViews ) ) ) +  
@@ -148,6 +151,6 @@ ggplot( data = views_time_events,
                      ymax = 247,
                      ymin = NA  ) 
 
-# dev.off()
+dev.off()
 
 
