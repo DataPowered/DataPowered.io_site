@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site/config.toml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="69" column="36" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="36" />
+            <state relative-caret-position="450">
+              <caret line="71" column="125" selection-start-line="71" selection-start-column="125" selection-end-line="71" selection-end-column="125" />
             </state>
           </provider>
         </entry>
@@ -280,12 +280,12 @@
       <workItem from="1534600158477" duration="9580000" />
       <workItem from="1534633719474" duration="4286000" />
       <workItem from="1534639857904" duration="102000" />
-      <workItem from="1534671946294" duration="6178000" />
+      <workItem from="1534671946294" duration="6254000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43638000" />
+    <option name="totallyTimeSpent" value="43714000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1030" extended-state="6" />
@@ -445,8 +445,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/site/config.toml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="69" column="36" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="36" />
+        <state relative-caret-position="450">
+          <caret line="71" column="125" selection-start-line="71" selection-start-column="125" selection-end-line="71" selection-end-column="125" />
         </state>
       </provider>
     </entry>
