@@ -6,7 +6,6 @@ tag = ["data cleaning"]
 author = ["Caterina"]
 +++
 
-> This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/data-guidelines).
 
 The extent to which a dataset follows a set of commonly expected guidelines will often determine how much time you have left to spend thinking about your analysis. Ideally, you might intend to spend 20% of your time cleaning the data for a project, and 80% planning and carrying out your actual analysis. But often, it might turn out to be the complete opposite. A messy, non-standardized dataset can end up taking up most of your time, so that when you finally bring it into a usable format, you realize you have to rush and finish up with your project. 
 
@@ -33,3 +32,5 @@ Here are some of my ideas for how to improve messy data. This is not meant to be
 As I've said above, I'd be really interested in getting feedback on this, based on other people's experiences with messy data. You can let me know your thoughts in the comment section below, or [email](mailto:info@datapowered.io) me. 
 
 
+
+> This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/data-guidelines).

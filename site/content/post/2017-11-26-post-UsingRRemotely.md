@@ -6,7 +6,6 @@ tag = ["R", "RStudio", "ssh", "vim"]
 author = ["Caterina"]
 +++
 
-> This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/using-vim-with-r).
 
 Why would you need to do this? Say, for instance, you are dealing with sensitive data that should not leave a specific system, or quite simply that you are away on a work retreat - but your laptop is far less powerful than your work desktop computer which you left behind - so you want to keep using it from a distance. For such reasons, I've been looking into what options are available to log in remotely to a machine and run `R` there for some analysis. Below are some of the alternatives I've come across: 
 
@@ -97,3 +96,5 @@ Hope you found it useful to go through these options for running `R` remotely. W
 
 
 
+
+> This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/using-vim-with-r).

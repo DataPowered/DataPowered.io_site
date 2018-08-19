@@ -6,7 +6,6 @@ tag = ["R", "ggplot2", "gganimate"]
 author = ["Caterina"]
 +++
 
-> This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/analysing-historical-event-data-in-r).
 
 For this post, I've managed to find some extremely interesting historical event data offered by the [Cline Center](http://www.clinecenter.illinois.edu/) on [this page](http://www.clinecenter.illinois.edu/data/event/phoenix/ ). As you will see, this dataset can be quite challenging because of the sheer number of dimensions you could look at. With so many options, it becomes tricky to create visualisations  with the 'right' level of granularity: not so high-level that any interesting patterns are obscured, but not too detailed and overcrowded either. 
 
@@ -360,4 +359,6 @@ full_BBC_events_with_meta[ , root_code := mapvalues( root_code, CAMEO_root_code,
 
 
 
+
+> This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/analysing-historical-event-data-in-r).
 

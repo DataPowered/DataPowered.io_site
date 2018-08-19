@@ -6,7 +6,6 @@ tag = ["R", "ggplot2", "ggmap"]
 author = ["Caterina"]
 +++
 
-> This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/la-maps-of-crime).
 
 
 I’ve recently come across [data.gov](https://catalog.data.gov/dataset?res_format=CSV) — a huge resource for open data. At the time of writing, there are close to 17,000 freely available datasets stored there, including [this one](https://catalog.data.gov/dataset/crime-data-from-2010-to-present) offered by the LAPD. Interestingly, this dataset includes almost 1.6M records of criminal activity occurring in LA since 2010 — all of them described according to a variety of measures (you can read about them [here](https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq)). 
@@ -305,3 +304,7 @@ ggmap( map ) +
 As expected, there isn't very much overlap between popular touristy areas in LA, and the areas where drug and prostitution activity tends to occur...
 
 So there you go. I hope this post was useful and managed to show you a few things you can do with `ggplot2`, if you have geographical data you want to plot.  For those interested, the full `R` script for this post can be found on GitHub [here](https://github.com/TheDataLabScotland/Data_Team_Blog_Posts/blob/master/CrimeData/CrimeData.R).
+
+
+
+> This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/la-maps-of-crime).
