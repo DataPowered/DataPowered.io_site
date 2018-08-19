@@ -16,19 +16,19 @@ library( gridExtra )
 library( ggthemr )
 ggthemr( "chalk", type = "outer", layout = "scientific", spacing = 2 )
 
-setwd( "/home/caterina/Documents/DataPoweredIO/victor-hugo-website/site/content" )
+setwd( "/your/dir/" )
 
 
 # Read in data ------------------------------------------------------------
 
 # Reading in GitHub log, specifying the ~ separator we used earlier.
-git_commits <- fread( "./datasets/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits/Events.csv", 
+git_commits <- fread( "Events.csv", 
                       sep = "~", header = FALSE )
 setnames( git_commits, c( "User", "Date", "Event" ) )
 # In this case, almost all commits are from the same user, so shall remove from data:
 git_commits[ , User := NULL ]
 
-google_analytics_measures <- fread( "./datasets/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits/Analytics20171001-20180811.csv" )
+google_analytics_measures <- fread( "Analytics20171001-20180811.csv" )
 setnames( google_analytics_measures, c( "Date", "PageViews", "UniquePageViews", "AverageTimeOnPage" ) )
 
 
@@ -37,7 +37,7 @@ setnames( google_analytics_measures, c( "Date", "PageViews", "UniquePageViews", 
 # Converting to Date class:
 google_analytics_measures[ , Date := as.Date( Date, format = "%m/%d/%y" ) ]
 
-# Extracting justthe  date part from full string, and also converting to Date class:
+# Extracting just the date part from full string, and also converting to Date class:
 git_commits[ , Date := substr( Date, 1, 10 ) ]
 git_commits[ , Date := as.Date( Date, format = "%Y-%m-%d" ) ]
 
@@ -78,7 +78,7 @@ single_event_index <- cbind( Event = LETTERS[ 1 : nrow( single_event_index ) ], 
 names( single_event_index ) <- c( "Event", "Date", "Description" )
 
 # # Export to png:
-# png( "./graphics/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits/ViewsVsTimeWithCommitLabels.png",
+# png( "ViewsVsTimeWithCommitLabels.png",
 #      width = 14,
 #      height = 6, 
 #      units = "in", res = 200 )
@@ -119,7 +119,7 @@ ggplot( data = views_time_events,
   ylab( "Views" ) +
   xlab( "Date" ) +
   scale_x_date( breaks = date_breaks( "months" ), labels = date_format( "%b-%y" ) ) +
-  # Add event index as grob - will serve as a legend for the letter codes:
+  # Add event index as grob - will serve as legend for the letter codes:
   annotation_custom( tableGrob( data.frame( single_event_index ),
                                 rows = NULL,
                                 theme = ttheme_default( base_size = 11,
