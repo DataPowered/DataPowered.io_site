@@ -2,8 +2,7 @@
 date = "2017-10-28"
 draft = true
 title = "Upcoming"
-
-tag = ["Nvim-R"]
+tag = ["R", "Nvim-R"]
 author = ["Caterina"]
 +++
 

@@ -52,7 +52,7 @@ PygmentsStyle = "native"
 	[params.about]
 		hide  = false
 		title = "**This is DataPowered.**"
-		content = "A fun place to share code and explore data"
+		content = "A fun place to share code and explore tools & data"
 
 	[params.portfolio]
 		hide  = false

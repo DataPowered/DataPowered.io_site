@@ -2,7 +2,7 @@
 date = "2017-11-26"
 draft = false
 title = "Using R remotely: some options and tips"
-tag = ["RStudio", "ssh", "vim"]
+tag = ["R", "RStudio", "ssh", "vim"]
 author = ["Caterina"]
 +++
 
