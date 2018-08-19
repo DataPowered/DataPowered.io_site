@@ -69,7 +69,39 @@ Now that we're armed with both Google Analytics data and GitHub logs, we can set
 
 
 
-<script src="https://gist-it.appspot.com/https://github.com/DataPowered/DataPowered.io_site/blob/master/site/content/Rscripts/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.R?slice=2:32&footer=0"></script>
+{{< highlight r "linenos=table, linenostart=1" >}}
+# Packages ----------------------------------------------------------------
+
+# library( devtools )
+# install_github( "cttobin/ggthemr" )
+
+library( data.table )
+library( stringr )
+library( plyr )
+library( tidyr )
+
+library( ggplot2 )
+library( scales ) # to access breaks/formatting functions
+library( gridExtra )
+library( ggthemr )
+ggthemr( "chalk", type = "outer", layout = "scientific", spacing = 2 )
+
+setwd( "/your/dir/" )
+
+
+# Read in data ------------------------------------------------------------
+
+# Reading in GitHub log, specifying the ~ separator we used earlier.
+git_commits <- fread( "Events.csv", 
+                      sep = "~", header = FALSE )
+setnames( git_commits, c( "User", "Date", "Event" ) )
+# In this case, almost all commits are from the same user, so shall remove from data:
+git_commits[ , User := NULL ]
+
+google_analytics_measures <- fread( "Analytics20171001-20180811.csv" )
+setnames( google_analytics_measures, c( "Date", "PageViews", "UniquePageViews", "AverageTimeOnPage" ) )
+{{< / highlight >}}
+
 
 
 You've already seen a snippet of the Google Analytics data above. The GitHub log should look something like this after the manipulations carried out in R (minus the `User` column which was deleted above):
@@ -89,7 +121,40 @@ You've already seen a snippet of the Google Analytics data above. The GitHub log
 
 Now let's proceed to some further operations, followed by merging the git log with the daily Google Analytics data:
 
-<script src="https://gist-it.appspot.com/https://github.com/DataPowered/DataPowered.io_site/blob/master/site/content/Rscripts/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.R?slice=34:64&footer=0"></script>
+
+{{< highlight r "linenos=table, linenostart=1" >}}
+# Data prep ---------------------------------------------------------------
+
+# Converting to Date class:
+google_analytics_measures[ , Date := as.Date( Date, format = "%m/%d/%y" ) ]
+
+# Extracting just the date part from full string, and also converting to Date class:
+git_commits[ , Date := substr( Date, 1, 10 ) ]
+git_commits[ , Date := as.Date( Date, format = "%Y-%m-%d" ) ]
+
+# There is a choice to make here between keeping the git log as is (long format), 
+# or switching to wide format (splitting commit titles across multiple columns if they occurred in the same day).
+# Will demonstrate the latter approach.
+
+# First choose some 'separator' for events which does not occur anywhere within the text,
+# and supply it below as the 'collapse' argument of paste():
+git_commits_wide <- aggregate( Event ~ Date, 
+                               FUN = function( x ){ paste( x, collapse = "___" ) },
+                               data = git_commits )
+
+# Find the maximum number of commits in a day, i.e., the no. of columns to split text across:
+maximum_commits_in_a_day <- max( table( git_commits$Date ) )
+
+git_commits_wide <- separate( git_commits_wide, 
+                              Event, 
+                              into = paste( "Event", 1 : maximum_commits_in_a_day, sep = "_"),
+                              sep = "___" )
+
+# Finally, join by date is now possible:
+views_time_events <- setDT( join( google_analytics_measures, git_commits_wide, by = "Date" ) )
+{{< / highlight >}}
+
+
 
 
 At this point, the joined / merged object `views_time_events` looks like so:
@@ -105,7 +170,71 @@ At this point, the joined / merged object `views_time_events` looks like so:
 
 From here, a good next step would be to plot the data. We can just use the events under `Event_1`, guaranteed to have a value each time a commit was made on a given day (the other columns will only be populated if multiple commits were made on the same date). Further Event-type columns could also be incorporated into the graph by adding to the tabularised 'legend', and to the `LETTERS` below:
 
-<script src="https://gist-it.appspot.com/https://github.com/DataPowered/DataPowered.io_site/blob/master/site/content/Rscripts/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.R?slice=72:134&footer=0"></script>
+
+{{< highlight r "linenos=table, linenostart=1" >}}
+# Graphs ------------------------------------------------------------------
+
+# Create an index of events to annotate on the plot:
+single_event_index <- na.exclude( views_time_events[ , c( "Date", "Event_1" ) ] )
+single_event_index <- cbind( Event = LETTERS[ 1 : nrow( single_event_index ) ], single_event_index )
+names( single_event_index ) <- c( "Event", "Date", "Description" )
+
+# # Export to png:
+# png( "ViewsVsTimeWithCommitLabels.png",
+#      width = 14,
+#      height = 6, 
+#      units = "in", res = 200 )
+
+# Setting the scene:
+ggplot( data = views_time_events,
+        aes( x = Date, y = cumsum( UniquePageViews ) ) ) +  
+  # Marking location of events, and labelling them with letters:
+  geom_vline( xintercept = views_time_events[ ! is.na( Event_1 ), Date ],
+              lwd = 0.5, color = "white" ) +
+  geom_label( data = single_event_index,
+              aes( x = Date, y = -10,
+                   label = LETTERS[ 1 : nrow( single_event_index ) ] ),
+              #str_wrap( Event_1, width = 18 )
+              size = 5, angle = 90,
+              color = "black", fontface = 2 ) +
+  # Draw line of cumulative page views, and label it:
+  geom_line( aes( x = Date, y = cumsum( PageViews ) ),
+             color = "#fcc49f", size = 2 ) +
+  annotate( "text", 
+            y = max( cumsum( views_time_events$PageViews ) ), 
+            x = max( views_time_events$Date ) + 12,
+            label = str_wrap( "Page views", width = 15 ),
+            size = 4.5, fontface = 1, 
+            color = "#fcc49f" ) +
+  # Draw line of cumulative UNIQUE page views, and label it also:
+  geom_line( size = 2, color = "#f46036" ) +
+  annotate( "text", 
+            y = max( cumsum( views_time_events$UniquePageViews ) ), 
+            x = max( views_time_events$Date ) + 12,
+            label = str_wrap( "Unique page views", width = 15 ),
+            size = 4.5, fontface = 1,
+            color = "#f46036" ) +
+  # Tweak the theme and surrounding text:
+  theme( text = element_text( size = 16 ),
+         axis.text.x = element_text( angle = 90 ) ) +
+  ggtitle( "Cumulative views over time, given labelled Git commits" ) +
+  ylab( "Views" ) +
+  xlab( "Date" ) +
+  scale_x_date( breaks = date_breaks( "months" ), labels = date_format( "%b-%y" ) ) +
+  # Add event index as grob - will serve as legend for the letter codes:
+  annotation_custom( tableGrob( data.frame( single_event_index ),
+                                rows = NULL,
+                                theme = ttheme_default( base_size = 11,
+                                                        core = list( fg_params = list( hjust = 0, x = 0 ) ),
+                                                        rowhead = list( fg_params = list( hjust = 0, x = 0 ) ) ) ), 
+                     xmin = quantile( as.numeric( views_time_events$Date ), probs = 0.22 ), 
+                     xmax = NA, 
+                     ymax = 247,
+                     ymin = NA  ) 
+
+# dev.off()
+{{< / highlight >}}
+
 
 
 You'll find the resulting plot at the <a href="#top">top of this post</a>.

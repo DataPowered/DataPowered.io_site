@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee5c46fc-43de-4f26-a565-275f75d768a8" name="Default Changelist" comment="" />
+    <list default="true" id="ee5c46fc-43de-4f26-a565-275f75d768a8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/site/content/post/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md" beforeDir="false" afterPath="$PROJECT_DIR$/site/content/post/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -58,32 +60,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/site/layouts/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/netlify.toml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="211" column="103" selection-start-line="211" selection-start-column="100" selection-end-line="211" selection-end-column="103" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/site/content/post/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="369">
+                <caret line="173" column="50" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="50" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site/layouts/_default/rss.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -94,6 +89,7 @@
       <find>recent blo</find>
       <find>png</find>
       <find>rss</find>
+      <find>content</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -109,7 +105,6 @@
         <option value="$PROJECT_DIR$/site/content/post/2018-08-13-post-burden-of-diseases-shiny.md" />
         <option value="$PROJECT_DIR$/site/content/post/2018-08-12-post-linking-googleanalytics-data-to-website-changes-or-github-commits.md" />
         <option value="$PROJECT_DIR$/site/content/post/2018-08-12-post-linking-google-analytics-data-to-website-changes-or-github-commits.md" />
-        <option value="$PROJECT_DIR$/site/content/post/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md" />
         <option value="$PROJECT_DIR$/site/themes/hugo-strata-theme/exampleSite/config.toml" />
         <option value="$PROJECT_DIR$/site/layouts/index.html" />
         <option value="$PROJECT_DIR$/site/config.toml" />
@@ -117,6 +112,7 @@
         <option value="$PROJECT_DIR$/site/content/post/2017-11-26-post-UsingRRemotely.md" />
         <option value="$PROJECT_DIR$/site/content/post/2017-10-18-post-data-guidelines.md" />
         <option value="$PROJECT_DIR$/site/content/post/2017-10-18-post-LA-maps-of-crime.md" />
+        <option value="$PROJECT_DIR$/site/content/post/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md" />
       </list>
     </option>
   </component>
@@ -166,6 +162,13 @@
               <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
               <item name="site" type="462c0819:PsiDirectoryNode" />
               <item name="content" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
+              <item name="victor-hugo-website" type="462c0819:PsiDirectoryNode" />
+              <item name="site" type="462c0819:PsiDirectoryNode" />
+              <item name="content" type="462c0819:PsiDirectoryNode" />
+              <item name="post" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="victor-hugo-website" type="b2602c69:ProjectViewProjectNode" />
@@ -229,12 +232,12 @@
       <workItem from="1534600158477" duration="9580000" />
       <workItem from="1534633719474" duration="4286000" />
       <workItem from="1534639857904" duration="102000" />
-      <workItem from="1534671946294" duration="8387000" />
+      <workItem from="1534671946294" duration="9220000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45847000" />
+    <option name="totallyTimeSpent" value="46680000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1030" extended-state="6" />
@@ -305,26 +308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="574">
           <caret line="78" lean-forward="true" selection-start-line="78" selection-end-line="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/content/post/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2175">
-            <caret line="107" selection-start-line="107" selection-end-line="107" selection-end-column="243" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/site/content/post/2017-10-19-post-Analysing-historical-event-data.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="760">
-            <caret line="362" column="146" selection-start-line="362" selection-start-column="146" selection-end-line="362" selection-end-column="146" />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -403,7 +386,31 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site/layouts/_default/rss.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/content/post/2017-10-19-post-Analysing-historical-event-data.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="370">
+            <caret line="226" column="46" selection-start-line="226" selection-start-column="15" selection-end-line="226" selection-end-column="46" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site/content/post/2018-08-18-post-linking-google-analytics-data-to-website-changes-or-github-commits.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="369">
+            <caret line="173" column="50" selection-start-line="173" selection-start-column="50" selection-end-line="173" selection-end-column="50" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
