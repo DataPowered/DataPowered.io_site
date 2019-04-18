@@ -14,7 +14,7 @@ PygmentsStyle = "native"
 	# To provide some metadata for search engines feel free to add a few
 	# information about you and your website.
 	name = "DataPowered"
-	description = "A fun place to share code and explore tools & data"
+	description = "A fun place to share code & explore tools for data science"
 
 	# Format dates with Go's time formatting
 	date_format = "2006-01-02"
