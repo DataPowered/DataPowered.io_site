@@ -54,10 +54,9 @@ PygmentsStyle = "native"
 		title = "**This is DataPowered.**"
 		content = "A fun place to share code and explore tools & data. <br/><br/> This is the homepage and blog of Dr Caterina Constantinescu, Data Scientist @ The Data Lab Innovation Centre. <br/> For more about me, see [here](http://datapowered.io/about/)."
 
-
 	[params.recentposts]
-		hide  = false
-		title = "Recent blog posts"
+    	hide  = false
+    	title = "Recent blog posts"
 
 	[params.portfolio]
 		hide  = false
@@ -137,4 +136,9 @@ PygmentsStyle = "native"
 [[menu.main]]
 	name = "DataPowered blog"
 	url  = "post/"
+	weight = 10
+
+[[menu.main]]
+	name = "Public speaking"
+	url  = "publicspeaking/"
 	weight = 10
