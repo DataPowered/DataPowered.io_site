@@ -2,7 +2,7 @@
 date = "2019-04-18"
 draft = false
 title = "Exploring transport routes, journey characteristics and postcode networks using R Shiny"
-tag = ["R", "Shiny"]
+tag = ["R", "Shiny", "leaflet"]
 author = ["Caterina"]
 +++
 

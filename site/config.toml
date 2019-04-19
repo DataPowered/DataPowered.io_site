@@ -124,7 +124,7 @@ PygmentsStyle = "native"
 
 # Menu links that appear on the left sidebar
 [[menu.main]]
-	name = "Homepage *"
+	name = "Homepage"
 	url  = "/"
 	weight = 5
 
