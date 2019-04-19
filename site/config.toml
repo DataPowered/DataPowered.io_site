@@ -139,11 +139,6 @@ PygmentsStyle = "native"
 	weight = 10
 
 [[menu.main]]
-   	name = "Latest categories"
-   	url  = "tag/"
-   	weight = 10
-
-[[menu.main]]
 	name = "Public speaking"
 	url  = "public_speaking/"
 	weight = 15
