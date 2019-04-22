@@ -33,4 +33,4 @@ title = "Public speaking"
 
 ### Podcasts
 
-Feb 2019 · [The 'DataFest Special' podcast](https://thedatalab.podbean.com/e/the-datafest-special/): guest speaker discussing DataTech19
+* [The 'DataFest Special' podcast](https://thedatalab.podbean.com/e/the-datafest-special/): guest speaker discussing DataTech19 (Feb 2019)
