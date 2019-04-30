@@ -12,6 +12,7 @@ title = "Categories / tags"
 * [ggplot2](http://datapowered.io/tag/ggplot2)
 * [GitHub](http://datapowered.io/tag/GitHub)
 * [Google Analytics](http://datapowered.io/tag/Google-Analytics)
+* [Kaggle](http://datapowered.io/tag/kaggle)
 * [Leaflet](http://datapowered.io/tag/leaflet) 
 * [Mentorship](http://datapowered.io/tag/Mentorship)
 * [R](http://datapowered.io/tag/R)
