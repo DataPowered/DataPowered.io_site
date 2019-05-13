@@ -33,5 +33,5 @@ title = "Public speaking"
 
 ### Podcasts
 
-* [Podcast with John Mertic, Director of Program Management, Linux Foundation](https://open.spotify.com/show/4LXRYpbjennNM54Pwplmw1)
+* [Podcast with John Mertic, Director of Program Management, Linux Foundation](https://open.spotify.com/show/4LXRYpbjennNM54Pwplmw1) (May 2019)
 * [The 'DataFest Special' podcast](https://thedatalab.podbean.com/e/the-datafest-special/): guest speaker discussing DataTech19 (Feb 2019)
