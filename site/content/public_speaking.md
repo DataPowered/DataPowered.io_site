@@ -15,7 +15,8 @@ title = "Public speaking"
 
 ### Conference presentations & invited talks
 
-* Adjusting reviewer scores for a fairer assessment via multi-faceted Rasch modelling (upcoming lightning talk at [useR!](http://user2019.r-project.org/) 2019)
+* Accepted lightning talk at the [Royal Statistical Society's International Conference](https://www.rss.org.uk/RSS/Events/RSS_Conference/2019_Conference/RSS/Events/Conference/2019_conference.aspx) 2019)
+* Adjusting reviewer scores for a fairer assessment via multi-faceted Rasch modelling (accepted lightning talk at [useR!](http://user2019.r-project.org/) 2019)
 * [Generalised Additive Models applied to tourism data](https://www.meetup.com/Newcastle-Upon-Tyne-Data-Science-Meetup/events/257156380/) (Newcastle Upon Tyne Data Science Meetup - upcoming talk in May) 
 * Women in Computing and Data Science (NHS/ISD talk, March 2019)
 * [An Introduction to The Data Lab Innovation Centre](https://www.epcc.ed.ac.uk/news/seminars) (Edinburgh Parallel Computing Centre, Jan 2018)
