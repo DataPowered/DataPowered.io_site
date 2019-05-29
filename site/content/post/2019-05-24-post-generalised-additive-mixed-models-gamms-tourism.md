@@ -1,6 +1,6 @@
 +++
 date = "2019-05-24"
-draft = true
+draft = false
 title = "Using Generalised Additive Mixed Models (GAMMs) to predict visitors to Edinburgh and Craigmillar Castles"
 tag = ["R", "gamm", "time series"]
 author = ["Caterina"]
@@ -19,7 +19,7 @@ _Craigmillar Castle. Image source [here](https://www.visitscotland.com/blog/film
 
 
 
-I'd been curious about **generalised additive (mixed) models** for some time, and the opportunity to learn more about them finally presented itself when a new project came my way. The aim of this project was to understand the pattern of visitors recorded at two historic sites in Edinburgh: Edinburgh and Craigmillar Castles - both of which are managed by [Historic Environment Scotland](https://www.historicenvironment.scot/).
+I'd been curious about **generalised additive (mixed) models** for some time, and the opportunity to learn more about them finally presented itself when a new project came my way. The aim of this project was to understand the pattern of visitors recorded at two historic sites in Edinburgh: Edinburgh and Craigmillar Castles - both of which are managed by [Historic Environment Scotland (HES)](https://www.historicenvironment.scot/).
 
 By _understand_ the pattern of visitors, I really mean _predict_ it on the basis of several 'reasonable' predictor variables (which I will detail a bit later). However, it is perhaps worth starting off with a simpler model, that predicts (or in this case, _forecasts_) visitor numbers from... visitor numbers in the past. This is similar to classic time series scenarios, where we would _use the data to predict itself_. 
 
@@ -57,6 +57,7 @@ To build our first, simpler `gamm` model, we will collapse visitor numbers acros
 _These data exhibit an interesting pattern of **seasonality** over summer (for both castles) and around Easter (especially for Craigmillar Castle), as well as a general - but modest - upward **trend**. But will our `gamm` model pick up on these aspects correctly?_
 
  So what are `gamm` models? To get a better idea, let's have a look at where they fit within a conceptual progression of other models:
+
 
 
 
@@ -123,7 +124,7 @@ gamm_mod <- gamm( Visitors ~
 
 # <span id="ForecastMod">Forecast model</span>
 
-We can now essentially apply a similar `gamm` to the one above to our data, the key difference being that we can allow the shape of the smooths to vary by Site (Edinburgh or Craigmillar), by specifying the predictors within the model as: `s( Month , bs = "cc" , by = Site )`. We can also add in a main effect for `Site`. All this will have been done after standardising the data separately within each site, to avoid results being distorted by the huge scale difference in visitor numbers between sites. At the end of this process, the output we get from our `gamm` is this:
+We can now essentially apply a similar `gamm` to the one above to our data, the key difference being that we can allow the shape of the smooths to vary by Site (Edinburgh or Craigmillar), by specifying the predictors within the model as: `s( Month, bs = "cc", by = Site )`. We can also add in a main effect for `Site`. All this will have been done after standardising the data separately within each site, to avoid results being distorted by the huge scale difference in visitor numbers between sites. At the end of this process, the output we get from our `gamm` is this:
 
 {{< highlight r>}}
 Family: gaussian 
@@ -158,54 +159,60 @@ R-sq.(adj) =  0.913
 
 The output is split between 'parametric' (unsmoothed) coefficients, and smooth terms. A key concept here is that of Effective Degrees of Freedom (EDF), which essentially tell you how 'wiggly' the fitted line is. For an EDF of 1, the predictor was estimated to have a __linear__ relationship to the outcome. Importantly, `mgcv` will __penalise__ overly wiggly lines to avoid overfitting, which suggests you can wrap all your continuous predictors within smoothing functions, and the model will determine whether/to what extent the data supports a wiggly shape.  
 
-As a measure of overall fit for the `gamm` model, we also get an __Adjusted R-squared__ at the end of the output (other measures such as GCV are offered for `gam` models, but absent here - details in my slides). Judging by this, our model is doing a good job of describing our data closely, so we can move on to generating a forecast as well... After converting the standardised values back to the original scale, this is how our prediction compares to the raw visitor numbers: 
+As a measure of overall fit for the `gamm` model, we also get an __Adjusted R-squared__ at the end of the output (other measures such as GCV are offered for `gam` models, but absent here - details in my slides). Judging by this, our model is doing a good job of describing our data, so we can move on to generating a forecast as well... After converting the standardised values back to the original scale, this is how our prediction compares to the raw visitor numbers: 
 
 <img src="https://github.com/DataPowered/DataPowered.io_site/raw/master/site/content/graphics/2019-05-24-post-generalised-additive-mixed-models-gamms-tourism/PredVsObsSimplerGAMM.jpg" alt="Edinburgh Castle" style="width:100%">
 _While the prediction produced follows the original data quite closely, it's worth noting the confidence intervals are impractically large and (following the conversion back to the original scale), also dip below 0, which for visitor numbers makes little sense. Possible solutions could be using a different `family` option in `gamm()` (perhaps Poisson or Quasi-Poisson), or at least truncating the lower bound of the confidence intervals._
 
 
 
+
+
+
+
+
 # <span id="ExplanatoryMod">Explanatory model</span>
 
+In order to check whether other variables also contribute to the pattern of visitors we have observed above, several types of data were collected from the following sources: 
 
-
-Hence, collect ‘plausible’ predictor data for this purpose...
-
-* [Organisation for Economic Co-operation and Development (OECD) Consumer Confidence Index (CCI)](https://data.oecd.org/leadind/consumer-confidence-index-cci.htm)
-* [Google Trends R package](https://cran.r-project.org/web/packages/gtrendsR/index.html) `gtrendsR`
-* [Global Data on Events, Language and Tone (GDELT)](https://www.gdeltproject.org/about.html)
-* [Internet Movie Database](https://www.imdb.com/) + [Open Movie Database](http://www.omdbapi.com/)
+* [Organisation for Economic Co-operation and Development (OECD) Consumer Confidence Index (CCI)](https://data.oecd.org/leadind/consumer-confidence-index-cci.htm) - this is an indicator of how confident households across various countries are in their financial situation, over time.
+* [Google Trends R package](https://cran.r-project.org/web/packages/gtrendsR/index.html) `gtrendsR` - searching for hits over time for the queries: "Edinburgh Castle" and "Craigmillar Castle"
+* [Global Data on Events, Language and Tone (GDELT)](https://www.gdeltproject.org/about.html) - this is a massive dataset measuring the tone and impact of world-wide news events as extracted from news articles
+* [Internet Movie Database](https://www.imdb.com/) + [Open Movie Database](http://www.omdbapi.com/) - these sources were scoured for data on productions related to Scotland (in terms of their plot or filming locations)
 * [Local weather data](https://www.geos.ed.ac.uk/~weather/jcmb_ws/)
-* For-Sight hotel booking data.
+* For-Sight hotel booking data including information on the number of nights or rooms booked across four major hotels in Edinburgh
+
+
+These data sources were merged with the HES visitor data by date, (and where applicable) country and site. To reduce the chance of overfitting, only one dimension per data source was retained for modelling purposes. These were selected via exploratory factor analysis (EFA) and fitting a single factor per data source in order to identify the variable that loaded onto it the most.
+
+The final `gamm` model had the following form:  
+
 
 So can these explain anything above and beyond the previous, simpler model?
 
 {{< highlight r>}}
-refining_best_gamm <- 
-  gamm( Visitors ~ 
-          s( Month, bs = "cc", by = Site )  +
-          s( as.numeric( Date ), by = TicketType, bs = "gp" ) +
-          te( Month, as.numeric( Date ), by = Site ) +
-          s( NumberOfAdults ) +
-          s( Temperature ) +
-          
-          Site +
-          TicketType +
+gamm( Visitors ~ 
+      s( Month, bs = "cc", by = Site )  +
+      s( as.numeric( Date ), by = TicketType, bs = "gp" ) +
+      te( Month, as.numeric( Date ), by = Site ) +
+      s( NumberOfAdults ) +
+      s( Temperature ) +
+      Site +
+      TicketType +
+      s( LaggedCCI ) + 
+      s( LaggedNumArticles ) +
+      s( LaggedimdbVotes ) + 
+      s( Laggedhits, by = Site ),
 
-          s( LaggedCCI ) + 
-          s( LaggedNumArticles ) +
-          s( LaggedimdbVotes ) + 
-          s( Laggedhits, by = Site ),
-
-        data = best_lag_solution,
-        
-        control = lmeControl( opt = "optim", msMaxIter = 10000 ),
-        random = list( GroupingFactor = ~ 1 ),
-        # GroupingFactor = Site x TicketType x Country
-        REML = TRUE,
-        correlation = corARMA( p = 1, q = 0 )
+    data = best_lag_solution,
+    control = lmeControl( opt = "optim", msMaxIter = 10000 ),
+    random = list( GroupingFactor = ~ 1 ), # GroupingFactor = Site x TicketType x Country
+    REML = TRUE,
+    correlation = corARMA( p = 1, q = 0 )
   )
 {{< / highlight >}}
+
+Based on the output for this model shown below, we can check in the parametric coefficients section how the various ticket types compare in popularity to Walk Up tickets (used as the baseline category), or how Edinburgh Castle compared to Craigmillar (the latter functioning as the baseline). In the smooth terms section, notably, we have allowed the spline for `Date` to vary depending on the ticket type concerned - a most useful thing to have done given the surprising EDF for Membership tickets...
 
 
 {{< highlight r>}}
@@ -259,21 +266,29 @@ R-sq.(adj) =  0.694   Scale est. = 0.3072    n = 932
 {{< / highlight >}}
 
 
+You can see this pattern below, in a plot created with the related package `itsadug`:
+
+<img src="https://github.com/DataPowered/DataPowered.io_site/raw/master/site/content/graphics/2019-05-24-post-generalised-additive-mixed-models-gamms-tourism/itsadug_Year_final_model.png" alt="Date spline varying by ticket types" style="width:90%">
+
+Disappointingly, the Adjusted R-squared for this more complex model is _lower_ than for the previous one - which suggests that the added variables (collectively) are not that successful in predicting visitor numbers at the two castles.
+
+
+
 # <span id="GoingFurther">Going further</span>
 
-Assumption checks...
+An important part of building `gam` or `gamm` models is carrying out assumption checks - a lot of information about this is present if you consult: `?mgcv::gam.check` and `?mgcViz::check.gamViz`, with an example also included in my slides <mark style="background-color:#76e2c7;">[**here**](https://github.com/DataPowered/DataPowered.io_site/blob/master/site/content/talks/HES_GAMs_Newcastle.pdf)</mark>.
 
-Extras
+
+I have only really scratched the surface of `gamm` models - and so much more is worth exploring. So here are a few great resources you can check out:
  
 * [Noam Ross' GAMs Intro Course](https://noamross.github.io/gams-in-r-course/)
-* [Mitchell Lyons' post](http://environmentalcomputing.net/intro-to-gams/)
+* [Mitchell Lyons' introduction to GAMs](http://environmentalcomputing.net/intro-to-gams/)
 * [Gavin Simpson's blog](https://www.fromthebottomoftheheap.net/blog/)
 * [Noam Ross - Nonlinear Models in R: The Wonderful World of mgcv](https://www.youtube.com/watch?v=q4_t8jXcQgc)
 * [Josef Fruehwald - Studying Pronunciation Changes with gamms](http://edinbr.org/edinbr/2017/10/10/october-meeting.html)
 
 
 
-<mark style="background-color:#76e2c7;">If you attended my talk on "Generalised Additive Models applied to tourism data", you can get my slides [**here**](https://github.com/DataPowered/DataPowered.io_site/blob/master/site/content/talks/HES_GAMs_Newcastle.pdf)</mark>.
 
 
 <!--
