@@ -67,13 +67,13 @@ _These data exhibit an interesting pattern of **seasonality** over summer (for b
 
 If trying to predict an outcome `y` via multiple linear regression on the basis of two predictor variables <code>x<sub>1</sub></code> and <code>x<sub>2</sub></code>, our model would have this general form:
 
- * <mark style="background-color:#76e2c7;">y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> + e</mark>
+ * y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> + e
  
  <!-- where we are particularly interested in finding the `b` coefficients that best fit the equation, and reduce the error `e` as much as possible.-->
 
 Translated into `R` syntax, a model of this nature could look like:
 {{< highlight r>}}
-lm _ mod <- lm( Visitors ~ TicketType + Site + Country , data = dat )
+lm _ mod <- lm( Visitors ~ Temperature + Rainfall, data = dat )
 {{< / highlight >}}
 
 As the name suggests, this type of model assumes **linear** relationships between variables (which, as we've seen from the plot above, is not the case here!), as well as independent observations - which, again, is highly unlikely in our case (as visitor numbers from one month will have some relationship to the following month). 
@@ -83,7 +83,7 @@ As the name suggests, this type of model assumes **linear** relationships betwee
 
 Under these circumstances, enter `gam` models (generalised additive models), which have this general form:
 
- * <mark style="background-color:#76e2c7;">y = b<sub>0</sub> + f<sub>1</sub>(x<sub>1</sub>) + f<sub>2</sub>(x<sub>2</sub>) + e</mark>
+ * y = b<sub>0</sub> + f<sub>1</sub>(x<sub>1</sub>) + f<sub>2</sub>(x<sub>2</sub>) + e
  
  As you will have noticed, in this case the single `b` coefficients have been replaced with entire (smooth) functions or splines. These in turn consist of smaller **basis functions**. Multiple types of basis functions exist (and are suitable for various data problems), and can be chosen through the `mgcv` package in `R`. These smooth functions allow to follow the shape of the data much more closely, and are not constrained by the assumption of linearity, unlike the previous type of model. 
  
