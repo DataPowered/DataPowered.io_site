@@ -19,7 +19,7 @@ _Craigmillar Castle. Image source [here](https://www.visitscotland.com/blog/film
 
 
 
-I'd been curious about **generalised additive (mixed) models** for some time, and the opportunity to learn more about them finally presented itself when a new project came my way. The aim of this project was to understand the pattern of visitors recorded at two historic sites in Edinburgh: Edinburgh and Craigmillar Castles - both of which are managed by [Historic Environment Scotland (HES)](https://www.historicenvironment.scot/).
+I'd been curious about **generalised additive (mixed) models** for some time, and the opportunity to learn more about them finally presented itself when a new project came my way as part of [The Data Lab](https://www.thedatalab.com/). The aim of this project was to understand the pattern of visitors recorded at two historic sites in Edinburgh: Edinburgh and Craigmillar Castles - both of which are managed by [Historic Environment Scotland (HES)](https://www.historicenvironment.scot/).
 
 By _understand_ the pattern of visitors, I really mean _predict_ it on the basis of several 'reasonable' predictor variables (which I will detail a bit later). However, it is perhaps worth starting off with a simpler model, that predicts (or in this case, _forecasts_) visitor numbers from... visitor numbers in the past. This is similar to classic time series scenarios, where we would _use the data to predict itself_. 
 
