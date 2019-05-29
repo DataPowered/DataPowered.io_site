@@ -21,14 +21,14 @@ _Craigmillar Castle. Image source [here](https://www.visitscotland.com/blog/film
 
 I'd been curious about **generalised additive (mixed) models** for some time, and the opportunity to learn more about them finally presented itself when a new project came my way. The aim of this project was to understand the pattern of visitors recorded at two historic sites in Edinburgh: Edinburgh and Craigmillar Castles - both of which are managed by [Historic Environment Scotland](https://www.historicenvironment.scot/).
 
-By _understand_ the pattern of visitors, I really mean _predict_ it on the basis of several 'reasonable' predictor variables (which I will detail a bit later). However, it is perhaps worth starting off with a simpler model, that predicts (or in this case, _forecasts_) visitor numbers from... visitor numbers in the past. This is a classic time series scenario, where we will _use the data to predict itself_. 
+By _understand_ the pattern of visitors, I really mean _predict_ it on the basis of several 'reasonable' predictor variables (which I will detail a bit later). However, it is perhaps worth starting off with a simpler model, that predicts (or in this case, _forecasts_) visitor numbers from... visitor numbers in the past. This is similar to classic time series scenarios, where we would _use the data to predict itself_. 
 
 
 <img src="https://github.com/DataPowered/DataPowered.io_site/raw/master/site/content/graphics/2019-05-24-post-generalised-additive-mixed-models-gamms-tourism/EdinburghCastle.jpg" alt="Edinburgh Castle" style="width:100%">
 _Edinburgh Castle. Image source [here](http://502.doinghistory.com/making-history-more-than-a-ghost-story/)._
 
 
-We will begin our discussion by first having a quick look at the data available. Then we will very briefly pause on some modelling aspects, to then be have a more meaningful discussion of our data forecast (created in `R` using package `mgcv`). After setting the scene, we can then discuss the additional sources of data that were used as predictors in a more complex, subsequent model. This is the overall structure we will follow:
+We will begin our discussion by first having a quick look at the data available. Then we will very briefly pause on some modelling aspects, to then have a more meaningful discussion of our data forecast (created in `R` using package `mgcv`). Afterwards, we can then discuss the additional sources of data that were used as predictors in a more complex, subsequent model. This is the overall structure we will follow:
 
 
 * [1. The data](#Data) 
@@ -44,16 +44,17 @@ We will begin our discussion by first having a quick look at the data available.
 
 # <span id="Data">The data</span>
 
-Our _monthly_ time series (courtesy of [Historic Environment Scotland](https://www.historicenvironment.scot/)) presents itself in long format, split by visitors' country of origin as well as the ticket type they purchased to gain entry to the two sites. Thus each row in the dataset details how many visitors were recorded:
+Our _monthly_ time series (courtesy of [Historic Environment Scotland](https://www.historicenvironment.scot/)) presents itself in long format, and is split by visitors' country of origin as well as the type of ticket they purchased to gain entry to either of the two sites. Thus each row in the dataset details how many visitors were recorded:
 
  * for a given month (starting with March 2012 for Edinburgh and March 2013 for Craigmillar Castle, until March 2018), 
  * from a given country (UK, for internal tourism, but also USA or Italy etc.)
  * purchasing a given ticket type (Walk up, or Explorer Pass etc.)
+ * visiting a given site (Edinburgh or Craigmillar).
 
-To build our first, simpler `gamm` model, we will collapse visitor numbers across these categories and only look at variations in the total number of visitors per month (without concerning ourselves with ticket types or countries yet). This collapsed data looks like this if plotted in `R` using `ggplot2`:
+To build our first, simpler `gamm` model, we will collapse visitor numbers across country and ticket type, and only look at variations in the total number of visitors per month for each site. This collapsed data looks like this if plotted in `R` using `ggplot2`:
  
 <img src="https://github.com/DataPowered/DataPowered.io_site/raw/master/site/content/graphics/2019-05-24-post-generalised-additive-mixed-models-gamms-tourism/Edinburgh_Craigmillar_linegraph_facets.jpg" alt="Edinburgh Castle" style="width:100%">
-_These data exhibit an interesting pattern of **seasonality** over summer (both castles) and around Easter (especially for Craigmillar Castle), as well as a general - but modest - upward **trend**. But will our `gamm` model pick up on these aspects correctly?_
+_These data exhibit an interesting pattern of **seasonality** over summer (for both castles) and around Easter (especially for Craigmillar Castle), as well as a general - but modest - upward **trend**. But will our `gamm` model pick up on these aspects correctly?_
 
  So what are `gamm` models? To get a better idea, let's have a look at where they fit within a conceptual progression of other models:
 
@@ -61,20 +62,31 @@ _These data exhibit an interesting pattern of **seasonality** over summer (both 
 
 # <span id="Models">Types of models</span>
 
-If trying to predict an outcome `y` on the basis of two predictors x<sub>1</sub> and x<sub>2</sub> via multiple linear regression, our model would have this general form:
+## Linear regression
 
- * y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> + e
+If trying to predict an outcome `y` via multiple linear regression on the basis of two predictor variables <code>x<sub>1</sub></code> and <code>x<sub>2</sub></code>, our model would have this general form:
 
-Translated into `R`, a model could look like:
+ * <mark style="background-color:#76e2c7;">y = b<sub>0</sub> + b<sub>1</sub>x<sub>1</sub> + b<sub>2</sub>x<sub>2</sub> + e</mark>
+ 
+ <!-- where we are particularly interested in finding the `b` coefficients that best fit the equation, and reduce the error `e` as much as possible.-->
+
+Translated into `R` syntax, a model of this nature could look like:
 {{< highlight r>}}
 lm _ mod <- lm( Visitors ~ TicketType + Site + Country , data = dat )
 {{< / highlight >}}
 
-As the name suggests, this type of model works for (assumed) **linear** relationships between variables (which, as we've seen from the plot above, is not the case here!), as well as independent observations - which, again, is highly unlikely in our case (visitor numbers during one month will have some relationship to the following month). Under these circumstances, enter `gam` models (generalised additive models), which have this general form:
+As the name suggests, this type of model assumes **linear** relationships between variables (which, as we've seen from the plot above, is not the case here!), as well as independent observations - which, again, is highly unlikely in our case (as visitor numbers from one month will have some relationship to the following month). 
 
- * y = b<sub>0</sub> + f<sub>1</sub>(x<sub>1</sub>) + f<sub>2</sub>(x<sub>2</sub>) + e
+
+## Generalised additive models (GAMs)
+
+Under these circumstances, enter `gam` models (generalised additive models), which have this general form:
+
+ * <mark style="background-color:#76e2c7;">y = b<sub>0</sub> + f<sub>1</sub>(x<sub>1</sub>) + f<sub>2</sub>(x<sub>2</sub>) + e</mark>
  
- Using `R` syntax, this becomes something like:
+ As you will have noticed, in this case the single `b` coefficients have been replaced with entire (smooth) functions or splines. These in turn consist of smaller **basis functions**. Multiple types of basis functions exist (and are suitable for various data problems), and can be chosen through the `mgcv` package in `R`. These smooth functions allow to follow the shape of the data much more closely, and are not constrained by the assumption of linearity, unlike the previous type of model. 
+ 
+ Using `R` syntax, a `gam` could appear as:
  
 {{< highlight r>}}
 library( mgcv )
@@ -85,12 +97,15 @@ gam_mod <- gam( Visitors ~ s( Month ) +
                 data = dat )
 {{< / highlight >}}
  
-As you will have noticed, in this case the single beta coefficients have been replaced with entire (smooth) functions or splines. These in turn consist of smaller **basis functions**. Multiple types of basis functions exist (and are suitable for various data problems), and can be chosen through the `mgcv` package in `R`. These smooth functions allow to follow the shape of the data much more closely, and are not constrained by linearity, unlike the previous type of model. However, `gam` models do still assume that that data points are independent - which for time series data, is not realistic. 
-
-For this reason, we now turn to `gamm` (generalised additive **mixed**) models - also supported by package `mgcv` in `R`. These allow the same flexibility of `gam` models (in terms of integrating smooth functions), as well as correlated data points. This can be done by specifying various types of autoregressive correlation structures, via some functionality 'borrowed' from the separate `nlme` package and `lme()` function for fitting linear mixed models (LMMs).
+However, `gam` models do still assume that data points are independent - which for time series data is not realistic. For this reason, we now turn to `gamm` (generalised additive **mixed**) models - also supported by package `mgcv` in `R`. 
 
 
-Unlike [(seasonal) ARIMA](https://people.duke.edu/~rnau/411arim.htm) models, with `gams` or `gamms` we needn't concern ourselves with differencing or detrending the time series - we just need to take these elements correctly into account as part of the model itself. One way to do so is to use both the month (values cycling from `1` to `12`), as well as the overall date as predictors, to capture the seasonality and trend aspects of the data, respectively. If we believe that the amount of seasonality may change over time, we can also add an interaction between the month and date. Finally, we can also specify various autoregressive correlation structures into our `gamm`, as follows: 
+## Generalised additive mixed models (GAMMs)
+
+These allow the same flexibility of `gam` models (in terms of integrating smooths), as well as correlated data points. This can be achieved by specifying various types of autoregressive correlation structures, via functionality already present in the separate `nlme::lme()` function for fitting linear mixed models (LMMs).
+
+
+Unlike [(seasonal) ARIMA](https://people.duke.edu/~rnau/411arim.htm) models, with `gamms` we needn't concern ourselves with differencing or detrending the time series - we just need to take these elements correctly into account as part of the model itself. One way to do so is to use both the month (values cycling from `1` to `12`), as well as the overall date as predictors, to capture the seasonality and trend aspects of the data, respectively. If we believe that the amount of seasonality may change over time, we can also add an interaction between the month and date. Finally, we can also specify various autoregressive correlation structures into our `gamm`, as follows: 
 
 
 {{< highlight r>}}
@@ -108,7 +123,7 @@ gamm_mod <- gamm( Visitors ~
 
 # <span id="ForecastMod">Forecast model</span>
 
-We can now essentially apply a similar model to the one above to our data, the key difference being that we can allow the shape of the smooths to vary Site (Edinburgh or Craigmillar), like so: `s ( Month , bs = " cc " , by = Site )`, as well as adding in the `Site` as a main effect. All this will have been done after standardising the data separately within each site, to avoid results being distorted by the huge scale difference in visitor numbers between sites. The output we get from our `gamm` is this:
+We can now essentially apply a similar `gamm` to the one above to our data, the key difference being that we can allow the shape of the smooths to vary by Site (Edinburgh or Craigmillar), by specifying the predictors within the model as: `s( Month , bs = "cc" , by = Site )`. We can also add in a main effect for `Site`. All this will have been done after standardising the data separately within each site, to avoid results being distorted by the huge scale difference in visitor numbers between sites. At the end of this process, the output we get from our `gamm` is this:
 
 {{< highlight r>}}
 Family: gaussian 
@@ -141,10 +156,12 @@ R-sq.(adj) =  0.913
 {{< / highlight >}}
 
 
-Based on this model, we can generate a forecast (more details on how to get this in R are in my slides below). After converting the prediction back to the original scale, this is how it compares to the raw visitor numbers: 
+The output is split between 'parametric' (unsmoothed) coefficients, and smooth terms. A key concept here is that of Effective Degrees of Freedom (EDF), which essentially tell you how 'wiggly' the fitted line is. For an EDF of 1, the predictor was estimated to have a __linear__ relationship to the outcome. Importantly, `mgcv` will __penalise__ overly wiggly lines to avoid overfitting, which suggests you can wrap all your continuous predictors within smoothing functions, and the model will determine whether/to what extent the data supports a wiggly shape.  
+
+As a measure of overall fit for the `gamm` model, we also get an __Adjusted R-squared__ at the end of the output (other measures such as GCV are offered for `gam` models, but absent here - details in my slides). Judging by this, our model is doing a good job of describing our data closely, so we can move on to generating a forecast as well... After converting the standardised values back to the original scale, this is how our prediction compares to the raw visitor numbers: 
 
 <img src="https://github.com/DataPowered/DataPowered.io_site/raw/master/site/content/graphics/2019-05-24-post-generalised-additive-mixed-models-gamms-tourism/PredVsObsSimplerGAMM.jpg" alt="Edinburgh Castle" style="width:100%">
-_While the prediction produced follows the original data quite closely (notice also the very large adjusted R squared!), it's worth noting the confidence intervals are impractically large and following the conversion back to the original scale, also cross 0 (which for visitor numbers makes little sense). Possible solutions would be to use a different `family` in the `gamm`, or at least truncate the lower bound of the intervals._
+_While the prediction produced follows the original data quite closely, it's worth noting the confidence intervals are impractically large and (following the conversion back to the original scale), also dip below 0, which for visitor numbers makes little sense. Possible solutions could be using a different `family` option in `gamm()` (perhaps Poisson or Quasi-Poisson), or at least truncating the lower bound of the confidence intervals._
 
 
 
