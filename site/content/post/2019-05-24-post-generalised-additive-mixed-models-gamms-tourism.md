@@ -73,7 +73,7 @@ If trying to predict an outcome `y` via multiple linear regression on the basis 
 
 Translated into `R` syntax, a model of this nature could look like:
 {{< highlight r>}}
-lm _ mod <- lm( Visitors ~ Temperature + Rainfall, data = dat )
+lm_mod <- lm( Visitors ~ Temperature + Rainfall, data = dat )
 {{< / highlight >}}
 
 As the name suggests, this type of model assumes **linear** relationships between variables (which, as we've seen from the plot above, is not the case here!), as well as independent observations - which, again, is highly unlikely in our case (as visitor numbers from one month will have some relationship to the following month). 
@@ -81,7 +81,7 @@ As the name suggests, this type of model assumes **linear** relationships betwee
 
 ## Generalised additive models (GAMs)
 
-Under these circumstances, enter `gam` models (generalised additive models), which have this general form:
+Under these circumstances, enter `gam` models, which have this general form:
 
  * y = b<sub>0</sub> + f<sub>1</sub>(x<sub>1</sub>) + f<sub>2</sub>(x<sub>2</sub>) + e
  
@@ -124,7 +124,7 @@ gamm_mod <- gamm( Visitors ~
 
 # <span id="ForecastMod">Forecast model</span>
 
-We can now essentially apply a similar `gamm` to the one above to our data, the key difference being that we can allow the shape of the smooths to vary by Site (Edinburgh or Craigmillar), by specifying the predictors within the model for instance as: `s( Month, bs = "cc", by = Site )`, where the `bs = "cc"` argument refers to the choice of basis type - in this case, cyclic cubic regression splines which are suitable for making sure December and January line up. In our model, we can also add in a main effect for `Site`. 
+We can now essentially apply a similar `gamm` to the one above to our data, the key difference being that we can allow the shape of the smooths to vary by Site (Edinburgh or Craigmillar), by specifying the predictors within the model for instance as: `s( Month, bs = "cc", by = Site )`, where the `bs = "cc"` argument refers to the choice of basis type - in this case, cyclic cubic regression splines which are useful to ensure that December and January line up. In our model, we can also add in a main effect for `Site`. 
 
 All this will have been done after standardising the data separately within each site, to avoid results being distorted by the huge scale difference in visitor numbers between sites. At the end of this process, the output we get from our `gamm` is this:
 
@@ -185,7 +185,7 @@ In order to check whether other variables may also contribute / relate to the pa
 * For-Sight hotel booking data, including information on the number of nights or rooms booked across four major hotels in Edinburgh
 
 
-These data sources were merged with the HES visitor data by date, (and where applicable) country and site. It was difficult to find datasets covering large intervals of time - hence it was often the case that with every successive data merge, the interval covered would get narrower... So to reduce the chance of overfitting, only one measure per data source was retained for modelling purposes. Variables selected via exploratory factor analysis (EFA) and fitting a single factor per data source in order to identify the variable that loaded onto it the highest.
+These datasets were merged with the HES visitor data by date, (and where applicable) country and site. It was difficult to find datasets covering large intervals of time - hence it was often the case that with every successive data merge, the interval covered would get narrower... So to reduce the chance of overfitting, only one measure per data source was retained for modelling purposes. Variables were selected via exploratory factor analysis (EFA) and by fitting a single factor per data source in order to identify the variable that loaded onto it the highest.
 
 
 So can these extra predictors explain anything above and beyond the previous, simpler model? Let's have a look at the final `gamm` model, which had the following form:  
@@ -289,14 +289,3 @@ Finally, I have only really scratched the surface of `gam` / `gamm` models - and
 * [Josef Fruehwald - Studying Pronunciation Changes with gamms](http://edinbr.org/edinbr/2017/10/10/october-meeting.html)
 
 
-
-
-
-<!--
-<object data="https://github.com/DataPowered/DataPowered.io_site/raw/master/site/content/talks/HES_GAMs_Newcastle.pdf" type="application/pdf" width="700px" height="700px">
-    <iframe src="https://github.com/DataPowered/DataPowered.io_site/raw/master/site/content/talks/HES_GAMs_Newcastle.pdf" width="100%" height="500px">
-        <p>This browser does not support PDFs. Please download the PDF to view it <a href="https://github.com/DataPowered/DataPowered.io_site/raw/master/site/content/talks/HES_GAMs_Newcastle.pdf">here</a>.
-        </p>
-    </iframe>
-</object>
--->
