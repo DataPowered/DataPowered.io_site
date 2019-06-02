@@ -8,7 +8,7 @@ title = "Public speaking"
 
 ### Community engagement 
 
-* [EdinbR meetup](https://www.meetup.com/EdinbR/) organiser (check out [our site](http://edinbr.org/) for details)
+* [EdinbR meetup](https://www.meetup.com/EdinbR/) organiser (check out [our site](http://edinbr.org/) for details). Previous EdinbR speakers have included [Hadley Wickham](http://edinbr.org/edinbr/2016/05/11/may-Hadley-Update2-PostingTalk.html) and [David Robinson](http://edinbr.org/edinbr/2018/02/01/february-meeting-David-Robinson.html).
 * [SatRday Newcastle](https://newcastle2019.satrdays.org/) conference co-organiser (April 2019)
 * [DataTech](https://www.datafest.global/data-tech) conference chair (March 2019)
 
