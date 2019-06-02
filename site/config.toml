@@ -129,17 +129,12 @@ PygmentsStyle = "native"
 	weight = 5
 
 [[menu.main]]
-  	name = "About me"
-    	url  = "about"
-    	weight = 0
-
-[[menu.main]]
 	name = "DataPowered blog"
 	url  = "post/"
 	weight = 10
 
 [[menu.main]]
-	name = "Categories"
+	name = "Content categories"
 	url  = "content/"
 	weight = 15
 
@@ -147,3 +142,13 @@ PygmentsStyle = "native"
 	name = "Public speaking"
 	url  = "public_speaking/"
 	weight = 20
+
+[[menu.main]]
+	name = "Mentorship"
+	url  = "mentorship/"
+	weight = 25
+
+[[menu.main]]
+  	name = "About me"
+    url  = "about"
+    weight = 30
