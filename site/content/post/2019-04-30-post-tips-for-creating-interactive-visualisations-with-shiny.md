@@ -1,7 +1,7 @@
 +++
 date = "2019-04-30"
 draft = false
-title = "Tips for creating interactive visualisations with Shiny"
+title = "Four tips for creating interactive visualisations with Shiny"
 tag = ["R", "ggplot2", "Shiny", "Kaggle"]
 author = ["Caterina"]
 +++
