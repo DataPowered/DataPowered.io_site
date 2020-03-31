@@ -1,10 +1,14 @@
 +++
-date = "2019-06-02"
+date = "2020-03-31"
 draft = false
 title = "Mentorship"
 
 +++
 
+
+### Scottish Government Accelerator Program (August-December 2019)
+
+This was a Scottish Government collaborative project aimed at mentoring George Mitchell (Assistant Economist at The Scottish Government) to clean and join financial tax data from a variety of sources, and then display it interactively using a Shiny app.
 
 
 ### DataFest Social Network Analysis (May-August 2019)

@@ -1,5 +1,5 @@
 +++
-date = "2018-07-28T22:51:00+01:00"
+date = "2020-03-31"
 draft = false
 title = "About me"
 
@@ -8,13 +8,13 @@ title = "About me"
 
 ### Background
 
-<img src="https://www.thedatalab.com/_assets/images/uploads/Caterina.png" width="225" style="float: left; margin-right: 25px;" />I am a data & research enthusiast working as data scientist at [The Data Lab](https://thedatalab.com/), with a background in psychology, emotion and research methods. I've recently completed my PhD at The University of Edinburgh, investigating whether various emotion-generating research stimuli (e.g., images, film clips, and virtual environments) can provide biased results, and whether any of them can bridge the gap between lab testing conditions and emotional states that occur in naturalistic, daily life settings. For this parallel to be possible, I collected "real life" data using a custom [Android phone app](https://github.com/CaterinaC/Android_App), as part of an experience sampling study. I also investigated whether model-based cluster analysis can serve as a computational model for how humans create fuzzy categories of emotional information.
+<img src="https://www.thedatalab.com/_assets/images/uploads/Caterina.png" width="225" style="float: left; margin-right: 25px;" />I am a data & research enthusiast working as Data Scientist at [Tesco Bank](https://www.tescobank.com/), following a few years of work as Data Scientist at [The Data Lab Innovation Centre](https://www.thedatalab.com/). 
 
-I started using R since my MSc studies, and continued to do so throughout my doctoral training. So overall, I've accumulated over 5 years' experience working in R, during which time I was involved in additional projects involving NHS data, scale development in the area of occupational therapy, and [transport data from a local Scottish council](http://edinbr.org/edinbr/2018/06/15/may-meeting-extra-ShinyAppCode.html).
+I am widely interested in data analysis, visualisation and manipulation - which I've applied across a variety of domains: national health data, occupational therapy, [transport](http://edinbr.org/edinbr/2018/06/15/may-meeting-extra-ShinyAppCode.html), data for good, [tourism](https://www.meetup.com/Newcastle-Upon-Tyne-Data-Science-Meetup/events/257156380/), and KPI monitoring/internal strategic planning. 
 
+My academic background is in psychology, emotion and research methods. I have completed my PhD at The University of Edinburgh, investigating if various emotion-generating stimuli used in lab settings could approximate emotional states occurring in daily life (as measured using a bespoke [Android phone app](https://github.com/CaterinaC/Android_App)). As part of my doctoral research, I also tested if [model-based cluster analysis](https://cran.r-project.org/web/packages/mclust/vignettes/mclust.html) can serve as a computational model for how humans create (fuzzy) emotional categories. 
 
-I am mostly an R user and I organise the [EdinbR meetup](http://edinbr.org/) - a group that brings together members of industry and academia to discuss R-related matters every month. However, I have also used Python and JavaScript (for programming experiments), and will hopefully venture further in that direction here.
-
+Lastly, I have also been heavily involved with community events in the area of data science: I have organised [DataTech19](https://www.datafest.global/data-tech) and planned DataTech20; I have also organised the [Edinburgh R meetup](https://www.meetup.com/EdinbR/) ([EdinbR](http://edinbr.org/)) for several years.
 
 
 
