@@ -8,7 +8,7 @@ title = "About me"
 
 ### Background
 
-<img src="https://www.thedatalab.com/_assets/images/uploads/Caterina.png" width="225" style="float: left; margin-right: 25px;" />I am a data & research enthusiast working as Data Scientist at [Tesco Bank](https://www.tescobank.com/), following a few years of work as Data Scientist at [The Data Lab Innovation Centre](https://www.thedatalab.com/). 
+<img src="https://pbs.twimg.com/profile_images/1174606641968422912/r7i0Tstr_400x400.jpg" width="225" style="float: left; margin-right: 25px;" />I am a data & research enthusiast working as Data Scientist at [Tesco Bank](https://www.tescobank.com/), following a few years of work as Data Scientist at [The Data Lab Innovation Centre](https://www.thedatalab.com/). 
 
 I am widely interested in data analysis, visualisation and manipulation - which I've applied across a variety of domains: national health data, occupational therapy, [transport](http://edinbr.org/edinbr/2018/06/15/may-meeting-extra-ShinyAppCode.html), data for good, [tourism](https://www.meetup.com/Newcastle-Upon-Tyne-Data-Science-Meetup/events/257156380/), and KPI monitoring/internal strategic planning. 
 
