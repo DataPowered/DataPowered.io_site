@@ -13,7 +13,7 @@ This was a Scottish Government collaborative project aimed at mentoring George M
 
 ### DataFest Social Network Analysis (May-August 2019)
 
-This project is part of The Data Lab's [industry placement program](https://www.thedatalab.com/what-we-do/skills-and-training/the-data-lab-msc), where a data science MSc student will carry out supervised research as part of an internship with an organisation. For this project, I will be managing [Jack Tacchi's](http://thelearnjourn.com/) work on dynamic social networks, to see whether changes over time in a particular Twitter network may be related to KPIs such as ticket sales for events.
+This project is part of The Data Lab's [industry placement program](https://www.thedatalab.com/what-we-do/skills-and-training/the-data-lab-msc), where a data science MSc student will carry out supervised research as part of an internship with an organisation. For [this project](https://www.youtube.com/watch?v=1qruOZNnQ3I), I managed [Jack Tacchi's](http://thelearnjourn.com/) work on dynamic social networks, to see whether changes over time in a particular Twitter network may be related to KPIs such as ticket sales for events.
 
 
 ### Scottish Government Accelerator Program (April-September 2018)
