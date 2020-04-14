@@ -7,15 +7,15 @@ author = ["Caterina"]
 +++
 
 
-I'd long been curious about web scraping and am pleased to have finally made a start in this direction. Previously, any scraping job I needed was carried out via [import.io](https://www.import.io/), but now I've branched out to [Scrapy](https://docs.scrapy.org/en/latest/). I'd also wanted to practise my use of Python, so this was a great opportunity to kill two birds with one stone. Here I'll share my first foray into this area - it may be useful for others who are also starting out (as well as for myself - later, a reminder). 
+I'd long been curious about web scraping and am pleased to have finally made a start in this direction. Previously, any scraping job I needed was carried out via [import.io](https://www.import.io/), but now I've branched out to [Scrapy](https://docs.scrapy.org/en/latest/). I'd also wanted to practise my use of Python, so this was a great opportunity to kill two birds with one stone. Here I'll share my first foray into this area - it may be useful for others who are also starting out (as well as for my future self, as a reminder). 
 
-I'm planning to do at least one more post on this same topic, but for now, we'll start with a simple case where all the content we are interested in is on a single page - no need to cycle across multiple pages of results etc. A good candidate I've found is this page on [LookFantastic](https://www.lookfantastic.com/voucher-codes.list), listing all their currently active discounts and vouchers. There are quite a few, but thankfully the page is fairly tidy, hence providing the perfect beginner case study. So here we go!
+I'm planning to do at least one more post on this same topic, but for now, we'll start with a simple case where all the content we are interested in is on one single page - no need to cycle across multiple pages of results etc. A good candidate I've found is this page on [LookFantastic](https://www.lookfantastic.com/voucher-codes.list), listing all their currently active discounts and vouchers. There are quite a few, but thankfully the page is fairly tidy, hence providing the perfect beginner case study. So here we go!
 
 ---
 
 ## But wait, why should I bother?
 
-Granted, this is just an example - but even here, there could be practical reasons for scraping the offers. For instance, we might be interested in multiple e-shops selling a particular item, so it could be useful to detect when an offer becomes active for that particular brand (or item). We could use scheduled tasks via `cron` and regularly scrape these sites, and then create an alert or email notification when an offer appears which involves the said item. In fact, web scraping can be useful to design services such as [Pouch](https://joinpouch.com/en-gb/) or [Honey](https://www.joinhoney.com/).
+Granted, this is just a toy example - but even here, there could be practical implications for scraping the offers. For instance, we might be interested in multiple e-shops selling a particular item, so it would be useful to know when an offer becomes active for that particular item. We could use scheduled tasks via `cron` and regularly scrape these sites, and then create an alert or email notification when a relevant offer appears. In fact, web scraping can be useful to design entire services of this nature (without knowing their infrastructure, [Pouch](https://joinpouch.com/en-gb/) or [Honey](https://www.joinhoney.com/) may use some form of web scraping).
 
 ---
 
@@ -53,12 +53,12 @@ response.get()
 {{< / highlight >}}
 
 
-Now that we have extracted the HTML from the URL, we have to figure out how to access specific elements that are of interest to us. This is where Firefox's Inspector comes in. When the Inspector is active and we hover over various elements on the page, this highlights the relevant HTML code that governs them. For instance, it is easy to see that the class of each offer 'chunk' is `voucher-info-wrapper`. 
+Now that we have extracted the HTML from the URL, we have to figure out how to access specific elements that are of interest to us. This is where Firefox's Inspector comes in. When the Inspector is active and we hover over various elements on the page, this will highlight the relevant HTML code that governs them. For instance, we can quickly see that the class of each offer "chunk" is `voucher-info-wrapper`. 
 
 <img src="https://raw.githubusercontent.com/DataPowered/DataPowered.io_site/master/site/content/graphics/2020-04-14-post-getting-stuck-in-with-scrapy/FirefoxInspector.png" alt="Firefox Inspector" style="width:100%">
 
 
-Bearing this in mind, we can use a selector in `Scrapy` to grab all the elements whose class is `voucher-info-wrapper`. The two methods below (CSS and XPath) lead to the same result: a `SelectorList` object. Depending on the task at hand, you'll be able to use either CSS or XPath to extract the same information - the choice is up to you, although in some cases, it will be either the CSS or the XPath version which is more direct: 
+Bearing this in mind, we can use a selector in `Scrapy` to grab all the elements whose class is `voucher-info-wrapper`. The two methods below (CSS and XPath) lead to the same output: a `SelectorList` object. Depending on the task at hand, you'll be able to use either CSS or XPath to extract the same information - the choice is up to you, although in some cases, it will be either the CSS or the XPath version which is more direct: 
 
 {{< highlight python >}}
 response.css(".voucher-info-wrapper")
@@ -72,19 +72,19 @@ If you are wondering, the XPath notation `//*` here signifies that we are lookin
 response.css(".voucher-info-wrapper").getall()
 {{< / highlight >}}
 
-There are many ways to use selectors and have them take advantage of other element characteristics, not just their class. For instance element `id` or location relative to the rest of the HTML document. Here are some pairs of examples:
+There are many ways to use selectors and have them take advantage of other element characteristics, not just `class`: for instance element `id`, or location relative to the rest of the HTML document. Here are some pairs of examples:
 
 {{< highlight python >}}
 # 1) By location/structure:
 # Let's grab the first div that's nested 6 'steps' deep within the Document Object 
-# Model (DOM, or the hierarchy of elements on the page).
-# Notice that we can also break up and chain selector commands:
+# Model (DOM, i.e., the hierarchy of elements on the page).
+# Notice that we can also break up & chain selector commands:
 halfway = response.css('html > body > div:nth-of-type(1) > div:nth-of-type(3)')
 halfway.css( '.section > div:nth-of-type(2) > div:nth-of-type(1)').get()
 # Or
 response.xpath('/html/body/div[1]/div[3]/section/div[2]/div[1]').get()
 
-# 2) By id (just an example, since our elements here don't actually have any):
+# 2) By id (just an example, since our elements here don't actually have IDs):
 response.css('div#SomeID').get()
 response.xpath('//*/div[@id = "SomeID"]').get()
 {{< / highlight >}}
@@ -93,7 +93,7 @@ response.xpath('//*/div[@id = "SomeID"]').get()
 
 ## Systematically extracting info to serve up as a pandas DataFrame
 
-So now that we have a rough idea of how to use XPath and CSS selectors in Scrapy, we can target particular pieces of information within each offer. For (almost) any offer, we'll observe:
+So now that we have a rough idea of how to use XPath and CSS selectors in `Scrapy`, we can target particular pieces of information from each offer. For (almost) any offer, we'll observe:
 
 * a title
 * a main offer message/text
@@ -135,8 +135,9 @@ messages_stripped_of_html = [strip_code.handle(item) for item in list_of_message
 
 
 # 3) Offer type
-# A particular type of offer will have its own class (e.g., money-off or cheapest-
-# free), but there is also a general 'voucher-label' class, that is applied across
+# The same element can have multiple classes simultaneously:
+# A particular type of offer will have a specific class (e.g., money-off or cheapest-
+# free), but there is also a general 'voucher-label' class that is applied across
 # all offer types. We'll use this generic one first, and then use regex (and 're()') 
 # to find the other associated classes which code the *specific* type of offer:
 offer_types = []
@@ -188,7 +189,7 @@ offer_df['Type'] = offer_df['Type'].str.replace('-', ' ').str.capitalize()
 
 ## Final output
 
-And voilà: we have scraped all the current offers on the [LookFantastic](https://www.lookfantastic.com/voucher-codes.list) site, and organised them into a tidy-looking DataFrame. The output should look like this:
+And voilà: we have scraped all the current offers on the [LookFantastic](https://www.lookfantastic.com/voucher-codes.list) site, and organised them into a tidy-looking DataFrame. The final output should look like this:
 
 <img src="https://raw.githubusercontent.com/DataPowered/DataPowered.io_site/master/site/content/graphics/2020-04-14-post-getting-stuck-in-with-scrapy/pdDataFrameOutput.png" alt="Final Output" style="width:100%">
 
