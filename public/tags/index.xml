@@ -1,7 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - My New Hugo Site</title>
-        <link>http://example.org/tags/</link>
-        <description>Tags - Tag - My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="http://example.org/tags/" rel="self" type="application/rss+xml" /></channel>
+        <title>Tags - Tag - DataPowered.io</title>
+        <link>https://datapowered.io/tags/</link>
+        <description>Tags - Tag - DataPowered.io</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>info@datapowered.io (Caterina)</managingEditor>
+            <webMaster>info@datapowered.io (Caterina)</webMaster><lastBuildDate>Wed, 18 Oct 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://datapowered.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>data cleaning</title>
+    <link>https://datapowered.io/tags/data-cleaning/</link>
+    <pubDate>Wed, 18 Oct 2017 00:00:00 &#43;0000</pubDate>
+    <author>Caterina</author>
+    <guid>https://datapowered.io/tags/data-cleaning/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

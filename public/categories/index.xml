@@ -1,7 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Categories - Category - My New Hugo Site</title>
-        <link>http://example.org/categories/</link>
-        <description>Categories - Category - My New Hugo Site</description>
-        <generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="http://example.org/categories/" rel="self" type="application/rss+xml" /></channel>
+        <title>Categories - Category - DataPowered.io</title>
+        <link>https://datapowered.io/categories/</link>
+        <description>Categories - Category - DataPowered.io</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>info@datapowered.io (Caterina)</managingEditor>
+            <webMaster>info@datapowered.io (Caterina)</webMaster><lastBuildDate>Wed, 18 Oct 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://datapowered.io/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>pre-analysis</title>
+    <link>https://datapowered.io/categories/pre-analysis/</link>
+    <pubDate>Wed, 18 Oct 2017 00:00:00 &#43;0000</pubDate>
+    <author>Caterina</author>
+    <guid>https://datapowered.io/categories/pre-analysis/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

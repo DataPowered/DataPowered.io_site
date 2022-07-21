@@ -2,6 +2,13 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://example.org/categories/</loc></url><url>
-            <loc>http://example.org/</loc></url><url>
-            <loc>http://example.org/tags/</loc></url></urlset>
+            <loc>https://datapowered.io/about/</loc><lastmod>2020-03-31T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/mentorship/</loc><lastmod>2020-03-31T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/engagement/</loc><lastmod>2020-03-31T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/categories/</loc><lastmod>2022-07-21T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/tags/data-cleaning/</loc><lastmod>2022-07-21T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/posts/2017-10-18-data-guidelines/</loc><lastmod>2022-07-21T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/</loc><lastmod>2022-07-21T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/posts/</loc><lastmod>2022-07-21T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/categories/pre-analysis/</loc><lastmod>2022-07-21T00:00:00&#43;00:00</lastmod></url><url>
+            <loc>https://datapowered.io/tags/</loc><lastmod>2022-07-21T00:00:00&#43;00:00</lastmod></url></urlset>

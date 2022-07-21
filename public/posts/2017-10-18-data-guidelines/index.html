@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Data guidelines for clean and usable data - DataPowered.io</title><meta name="Description" content="Homepage and blog of Dr Caterina Constantinescu"><meta property="og:title" content="Data guidelines for clean and usable data" />
+<meta property="og:description" content="The 80/20 split Since project deadlines tend to be more or less fixed, the extent to which a dataset follows a set of commonly expected guidelines will often determine how much time you have left to spend thinking about your analysis. To use the split that everyone conventionally mentions, you would hope to spend a modest 20% of your time cleaning the data for a project, and 80% planning and carrying out your actual analysis." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://datapowered.io/posts/2017-10-18-data-guidelines/" /><meta property="og:image" content="https://datapowered.io/images/logo.jpg"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-10-18T00:00:00+00:00" />
+<meta property="article:modified_time" content="2022-07-21T00:00:00+00:00" /><meta property="og:site_name" content="DataPowered" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://datapowered.io/images/logo.jpg"/>
+
+<meta name="twitter:title" content="Data guidelines for clean and usable data"/>
+<meta name="twitter:description" content="The 80/20 split Since project deadlines tend to be more or less fixed, the extent to which a dataset follows a set of commonly expected guidelines will often determine how much time you have left to spend thinking about your analysis. To use the split that everyone conventionally mentions, you would hope to spend a modest 20% of your time cleaning the data for a project, and 80% planning and carrying out your actual analysis."/>
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://datapowered.io/posts/2017-10-18-data-guidelines/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Data guidelines for clean and usable data",
+        "inLanguage": "en",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/datapowered.io\/posts\/2017-10-18-data-guidelines\/"
+        },"genre": "posts","keywords": "data cleaning","wordcount":  1015 ,
+        "url": "https:\/\/datapowered.io\/posts\/2017-10-18-data-guidelines\/","datePublished": "2017-10-18T00:00:00+00:00","dateModified": "2022-07-21T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Caterina"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="DataPowered.io"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/logo.jpg"
+        data-srcset="/images/logo.jpg, /images/logo.jpg 1.5x, /images/logo.jpg 2x"
+        data-sizes="auto"
+        alt="/images/logo.jpg"
+        title="/images/logo.jpg" />DataPowered</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/about/"> About </a><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><a class="menu-item" href="/engagement/"> Engagement </a><a class="menu-item" href="/mentorship/"> Mentorship </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Your needle in this haystack" id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="DataPowered.io"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/logo.jpg"
+        data-srcset="/images/logo.jpg, /images/logo.jpg 1.5x, /images/logo.jpg 2x"
+        data-sizes="auto"
+        alt="/images/logo.jpg"
+        title="/images/logo.jpg" />DataPowered</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Your needle in this haystack" id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/about/" title="">About</a><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a class="menu-item" href="/engagement/" title="">Engagement</a><a class="menu-item" href="/mentorship/" title="">Mentorship</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Data guidelines for clean and usable data</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://datapowered.io/" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Caterina</a></span>&nbsp;<span class="post-category">included in <a href="/categories/pre-analysis/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>pre-analysis</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2017-10-18">2017-10-18</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1015 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/2017-10-18-data-guidelines/images/header_image_credit_enjo_co_uk.jpg"
+        data-srcset="/posts/2017-10-18-data-guidelines/images/header_image_credit_enjo_co_uk.jpg, /posts/2017-10-18-data-guidelines/images/header_image_credit_enjo_co_uk.jpg 1.5x, /posts/2017-10-18-data-guidelines/images/header_image_credit_enjo_co_uk.jpg 2x"
+        data-sizes="auto"
+        alt="/posts/2017-10-18-data-guidelines/images/header_image_credit_enjo_co_uk.jpg"
+        title="/posts/2017-10-18-data-guidelines/images/header_image_credit_enjo_co_uk.jpg" width="1000" height="709" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-8020-split">The 80/20 split</a></li>
+    <li><a href="#a-list-of-tidy-data-recommendations">A list of tidy data recommendations</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="the-8020-split">The 80/20 split</h2>
+<p>Since project deadlines tend to be more or less fixed, the extent to which a dataset follows a set of commonly expected guidelines will often determine how much time you have left to spend thinking about your analysis. To use the split that everyone conventionally mentions, you would hope to spend a modest 20% of your time cleaning the data for a project, and 80% planning and carrying out your actual analysis. But often, these numbers might be reversed. Hence a messy, non-standardized dataset can take up most of your time, so that when you finally convert it into a usable format, you realize you have to rush and wrap up your project.</p>
+<p>Sound familiar? It&rsquo;s definitely happened to me before. So I&rsquo;ve started thinking if there is a way to avoid this pattern of work. Whenever you&rsquo;re not driving your own data collection (which can happen frequently), you have no control over the format your data arrives in. But what you <em>can</em> do is spread the word on what &lsquo;clean&rsquo; data means, in the hope that at some point, good practices will become standard and the 80% of time spent on cleaning data will be a thing of the past.</p>
+<p>Here are some of my ideas for how to improve (or even prevent) messy data. This is not meant to be an exhaustive list, so feel free to pitch in if you think I&rsquo;ve missed something! It would be really interesting to get other people&rsquo;s input on this.</p>
+<h2 id="a-list-of-tidy-data-recommendations">A list of tidy data recommendations</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Guideline</th>
+<th>Details</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Same code used consistently throughout the database to indicate missing / unknown values.</td>
+<td>Blank cells should not be used as a substitute, as these can be misleading.</td>
+<td>Suggestions for missing value codes: “NA” or “999” etc.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>An accompanying data codebook should be provided.</td>
+<td>This is a record of all variables within the database, with an explanation for what each of them means, the range of possible values, and the column type (e.g., integer, numeric, categorical etc.)</td>
+<td>For a variable named ‘ConsumSatisf’, an explanatory entry would be provided in the codebook to say that this variable represents a measure of consumer satisfaction with product ‘X’, and that possible values range from 0 to 9 (with column type as integer).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>In case multiple datasets are shipped to the analyst, clear indications should be given for whether there is a linking key between these, and what this is.</td>
+<td></td>
+<td>If two datasets are sent, one containing GP referral data, and the other containing specialist care medical data, then the two datasets should contain a common key for patient IDs, which would share the same meaning between dataset (i.e., patient ‘1234567’ should refer to the same person across the two datasets).</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Removing duplicated rows, i.e., rows that are perfectly identical within the database (from the first, through to the final column).</td>
+<td>In more sensitive cases, it may not be enough to remove just perfect duplicates, but special care should also be taken when two rows are identical - with only the exception of a few columns.</td>
+<td>In a database with patient records, a pair of rows is found that share the same patient ID, the same assessment date, the same prescription, and yet one row suggest the patient was discharged, whereas the other suggests the patient was not discharged. Wherever possible, such situations should be avoided before ever shipping the data, as they are misleading.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Removing trailing whitespaces.</td>
+<td>There should be no spaces padding the actual values within cells.</td>
+<td>A database cell should only contain values such as “3”, rather than  “3 ” or “  3 ” etc.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>There should only be one ‘atomic’ value per cell.</td>
+<td>That is, a value coding only one specific characteristic.</td>
+<td>A single ‘Name’ variable should be replaced by two atomic variables: ‘Surname’ and ‘Forename’. Similarly, a variable called ‘HotelPreferences’ (with a value such as ‘Hilton;Marriot;Ibis’) should be divided into as many separate columns as necessary, e.g., ‘HotelPreference1’ (value = ‘Hilton’), ‘HotelPreference2’ (value = ‘Marriot’), and so on.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>The same unit of measuremement should be used consistently throughout the same column. If this is not possible, alternatively, the units of measurement can also be mixed, however this can be allowed only if one variable contains the numeric values, and another vartiable specifies the associated unit of measurement.</td>
+<td></td>
+<td>For medication dosages per patient, a variable could be called ‘DailyIbuprofenDosageMg’, and the values in that column should be restricted to only numeric values, e.g., ‘0.5’, ‘1.5’ - which would be known to be in milligrams. Alternatively, if mixing units of measurement, this format is also possible: for a variable called, ‘DailyIbuprofenDosage’, with values ‘0.5’, ‘1.5’ etc, another variable should be created, e.g., ‘DailyIbuprofenUnit’, with values: ‘mg’, ‘mcg’ etc. Of course, the units of measurement would need to be typed in consistentently (e.g., using either ‘mcg’ or ‘micrograms’, but never both interchangeably).</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Related variables should follow the same naming scheme.</td>
+<td></td>
+<td>Reusing the hotel preferences example above, variables should be named consistently, e.g., ‘HotelPref1’, ‘HotelPref2’ etc, rather than ‘HotelPreference1’, ‘HotelPref2’, ‘Pref3’ etc.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Variable names should not contain spaces.</td>
+<td></td>
+<td>A variable name such as ‘Date of birth’ should be replaced with ‘DateOfBirth’ or ‘date_of_birth’ etc.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>For dates, the same convention should be used consistently and mentioned in the data codebook.</td>
+<td></td>
+<td>If the format ‘dd/mm/yyyy’ is preferred, this should be maintainted everywhere within the date variable, without cases such as ‘mm/dd/yyyy’, or ‘dd-mm-yyyy’ ever occurring.</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Use spelling and capitalisation consistently within columns.</td>
+<td></td>
+<td>In a ‘Gender’ variable, values could be coded as either 0 and 1 (with the explanation provided in the database codebook for which is female and which is male), or if the genders are typed in as words, then ‘male’ should not get mixed with ‘Male’ etc.</td>
+</tr>
+</tbody>
+</table>
+<p>As I&rsquo;ve said above, I&rsquo;d be really interested in getting feedback on this, based on other people&rsquo;s experiences with messy data. You can let me know your thoughts in the comment section below, or <a href="mailto:info@datapowered.io" rel="">email</a> me.</p>
+<blockquote>
+<p>This content was first published on <a href="https://thedatateam.silvrback.com/data-guidelines" target="_blank" rel="noopener noreffer ">The Data Team @ The Data Lab blog</a>.</p>
+</blockquote>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-07-21</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://datapowered.io/posts/2017-10-18-data-guidelines/" data-title="Data guidelines for clean and usable data" data-via="c__constantine" data-hashtags="data cleaning"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://datapowered.io/posts/2017-10-18-data-guidelines/" data-hashtag="data cleaning"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://datapowered.io/posts/2017-10-18-data-guidelines/" data-title="Data guidelines for clean and usable data"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://datapowered.io/posts/2017-10-18-data-guidelines/" data-title="Data guidelines for clean and usable data"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://datapowered.io/posts/2017-10-18-data-guidelines/" data-title="Data guidelines for clean and usable data" data-image="images/header_image_credit_enjo_co_uk.jpg"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/data-cleaning/">data cleaning</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.101.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2017 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://datapowered.io/" target="_blank">Caterina</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,12 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>DataPowered.io</title>
-        <link>https://datapowered.io/</link>
-        <description>Homepage and blog of Dr Caterina Constantinescu</description>
+        <title>data cleaning - Tag - DataPowered.io</title>
+        <link>https://datapowered.io/tags/data-cleaning/</link>
+        <description>data cleaning - Tag - DataPowered.io</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>info@datapowered.io (Caterina)</managingEditor>
-            <webMaster>info@datapowered.io (Caterina)</webMaster><lastBuildDate>Wed, 18 Oct 2017 00:00:00 &#43;0000</lastBuildDate>
-            <atom:link href="https://datapowered.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
+            <webMaster>info@datapowered.io (Caterina)</webMaster><lastBuildDate>Wed, 18 Oct 2017 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://datapowered.io/tags/data-cleaning/" rel="self" type="application/rss+xml" /><item>
     <title>Data guidelines for clean and usable data</title>
     <link>https://datapowered.io/posts/2017-10-18-data-guidelines/</link>
     <pubDate>Wed, 18 Oct 2017 00:00:00 &#43;0000</pubDate>
