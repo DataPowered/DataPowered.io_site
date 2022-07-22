@@ -9,7 +9,7 @@ featuredImage: "images/ssh-tutorial-how-does-ssh-work-imagecredit-wwwhostingerco
 ---
 
 
-
+&nbsp;
 
 
 Why would you need to do this? Say, for instance, you are dealing with sensitive data that should not leave a specific system, or quite simply that you are away on a work retreat - but your laptop is far less powerful than your work desktop computer which you left behind - so you want to keep using it from a distance. For such reasons, I've been looking into what options are available to log in remotely to a machine and run `R` there for some analysis. Below are some of the alternatives I've come across: 

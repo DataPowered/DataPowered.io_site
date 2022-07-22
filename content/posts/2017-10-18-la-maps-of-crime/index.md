@@ -9,7 +9,7 @@ featuredImage: "images/dark_alleyway.jpg"
 ---
 
 
-
+&nbsp;
 
 I’ve recently come across [data.gov](https://catalog.data.gov/dataset?res_format=CSV) — a huge resource for open data. At the time of writing, there are close to 17,000 freely available datasets stored there, including [this one](https://catalog.data.gov/dataset/crime-data-from-2010-to-present) offered by the LAPD. Interestingly, this dataset includes almost 1.6M records of criminal activity occurring in LA since 2010 — all of them described according to a variety of measures (you can read about them [here](https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq)). 
 
@@ -116,7 +116,7 @@ bare_version
 What we've done above (mainly) is grab the Google Map we saved earlier,and add our own layer of data to it, using `geom_point()`. As this is a fairly large dataset, we also sliced the data for the plot, which now includes only crimes occurring after 11pm, involving underage victims, and occurring post-2011. You can see the result below, where every black point represents a reported incident:
 
 
-<img src="images/BareMap.png" alt="Bare map" width="800">
+<img src="images/BareMap.png" alt="Bare map" width="100%">
 
 Why stop here though? `ggplot2` offers such a wide variety of options, so let's use a few more. For instance, we can split the view according to one categorical variable - for instance, the year of occurrence. Like so:
 
@@ -127,7 +127,7 @@ version_with_one_facet
 {{< / highlight >}}
 
 
-<img src="images/Map_OneFacet.png" alt="Map one facet" width="800">
+<img src="images/Map_OneFacet.png" alt="Map one facet" width="100%">
 
 Sadly, over a period of 6 years, no decrease in the amount of LA crime seems to have occurred... But maybe we can get a better idea if we further split the data by a second categorical variable, for a more detailed view over time:
 
@@ -138,7 +138,7 @@ version_with_two_facets
 {{< / highlight >}}
 
 
-<img src="images/Map_TwoFacets.png" alt="Map two facets" width="800">
+<img src="images/Map_TwoFacets.png" alt="Map two facets" width="100%">
 
 Unless we use some inferential approach to prove otherwise, if anything it looks like over time, criminal incidents rose slightly and/or started concentrating towards the middle of the map... The final three panels might look like an exception, but they do not mean that crime "has vanished" - rather, there simply is no data available for October, November & December 2017.
 
@@ -155,7 +155,7 @@ version_with_two_facets_no_labels
 {{< / highlight >}}
 
 
-<img src="images/Map_TwoFacets_NoLabels.png" alt="Map two facets, no labels" width="800">
+<img src="images/Map_TwoFacets_NoLabels.png" alt="Map two facets, no labels" width="100%">
 
 
 ---
@@ -202,7 +202,7 @@ ggmap( map ) +
 
 {{< / highlight >}}
 
-<img src="images/InternetCrimes_x_Year.png" alt="Internet crimes by year" width="800">
+<img src="images/InternetCrimes_x_Year.png" alt="Internet crimes by year" width="100%">
 
 
 As you can see (and may have suspected), online crimes have gradually increased since 2010. For drugs and prostitution, it's a different story: despite hopes for a decline in this area, the number of incidents reported looks roughly the same over time:
@@ -223,7 +223,7 @@ ggmap( map ) +
   theme_grey( base_size = 18 ) 
 {{< / highlight >}}
 
-<img src="images/DrugsPros_x_Year.png" alt="Drugs and prostitution by year" width="800">
+<img src="images/DrugsPros_x_Year.png" alt="Drugs and prostitution by year" width="100%">
 
 
 
@@ -301,7 +301,7 @@ ggmap( map ) +
                     segment.color = "red", segment.size = 0.3 )
 {{< / highlight >}}
 
-<img src="images/CrimeDataLabelledMap.png" alt="Labelled map of crime data" width="800">
+<img src="images/CrimeDataLabelledMap.png" alt="Labelled map of crime data" width="100%">
 
 
 

@@ -9,7 +9,7 @@ featuredImage: "images/header.png"
 ---
 
 
-
+&nbsp;
 
 Following my [previous post](https://datapowered.io/posts/2017-11-26-using-r-remotely/) on how to use `R` remotely, I thought I'd follow up with a slightly more in-depth description for how to use `R` via `vim`, and with `tmux`. This discussion will focus on how to get things working on Linux (Ubuntu) - which is what I am using.
 
@@ -49,7 +49,7 @@ You can also find:
 
 If you've been following along, you should be seeing something like this:
 
-<img src="images/R_via_Vim_1.png" alt="R via vim 1" width="800">
+<img src="images/R_via_Vim_1.png" alt="R via vim 1" width="100%">
 
 Now, we're about to make things a little more interesting, and fire up `Vim` with an `R` script on display.
 
@@ -76,7 +76,7 @@ $ vim foo.R bar.R
 
 Anyway, when opening a single file you should see something like this:
 
-<img src="images/R_via_Vim_2.png" alt="R_via_Vim_2" width="800">
+<img src="images/R_via_Vim_2.png" alt="R_via_Vim_2" width="100%">
 
 &nbsp;
 
@@ -88,7 +88,7 @@ If you happen to be in any other mode, to revert back to this **command mode** y
 
 Assuming you haven't changed any of the `Nvim-R` defaults, you can let `Vim` know you want to start an `R` session by typing: `\rf` (or `\rq` to quit). That should immediately create a new pane, which looks like this:
 
-<img src="images/R_via_Vim_3.png" alt="R_via_Vim_3" width="800">
+<img src="images/R_via_Vim_3.png" alt="R_via_Vim_3" width="100%">
 
 Between the two top panes, you can use your mouse to go back and forth. However to switch from either of these to the bottom pane, you have to still use the keyboard shortcut I mentioned before:  `Ctrl + B` and then &darr;.
 
@@ -163,7 +163,7 @@ A very nice touch is also that you can type into the console: `?data.frame` and 
 
 For plotting, if you type `plot( 1:10 )` into the `R` console, a pop-up will appear as well. See below:
 
-<img src="images/R_via_Vim_4.png" alt="R_via_Vim_4" width="800">
+<img src="images/R_via_Vim_4.png" alt="R_via_Vim_4" width="100%">
 
 
 

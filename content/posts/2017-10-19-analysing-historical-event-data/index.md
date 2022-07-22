@@ -8,6 +8,8 @@ categories: ["data visualisation"]
 featuredImage: "images/antique-world-map.jpg"
 ---
 
+&nbsp;
+
 For this post, I've managed to find some extremely interesting historical event data offered by the [Cline Center](http://www.clinecenter.illinois.edu/) on [this page](http://www.clinecenter.illinois.edu/data/event/phoenix/ ). As you will see, this dataset can be quite challenging because of the sheer number of dimensions you could look at. With so many options, it becomes tricky to create visualisations  with the 'right' level of granularity: not so high-level that any interesting patterns are obscured, but not too detailed and overcrowded either. 
 
 To quote the Cline Center's own description of this data, it:
@@ -23,7 +25,7 @@ Of the three sources, below we'll explore the BBC dataset ("BBC Summary of World
 
 Before we dive in, it's important to mention a few things about the structure of this BBC dataset. Here is a window onto how the original data looked, before I implemented any edits of my own:
 
-<img src="images/FullBBCEventDataView.png" alt="Full BBC Event Data View" width="800">
+<img src="images/FullBBCEventDataView.png" alt="Full BBC Event Data View" width="100%">
 
 One thing you may notice, for instance, is that some characteristics of this dataset go against the set of data guidelines I've [previously recommended](http://datapowered.io/post/2017-10-18-post-data-guidelines/): e.g., the `source` and `target` variables do not contain atomic values, but rather string together multiple values, as well as some punctuation characters. This and various other issues had to be addressed before actually starting to look at the data. If you're interested, you can see my `R` code for this [at the bottom of this page](#DataCleaningAndManipulations).
 
@@ -95,7 +97,7 @@ ggplot( two_level_aggregates[ year > 1977, ],
 And the caterpillar plot below is the result - with countries ordered within each panel by the grand mean (country-level average) on the Goldstein scale, across the whole period assessed, and with lines representing the range of values.
 
 
-<img src="images/CaterpillarPlotByContinent.png" alt="Caterpillar Plot By Continent" width="800">
+<img src="images/CaterpillarPlotByContinent.png" alt="Caterpillar Plot By Continent" width="100%">
 
 
 &nbsp;
@@ -133,7 +135,7 @@ dev.off()
 
 This is the result. It's interesting to see that of the bunch, and according to this data, Turkey spends the most time on the fringes between cooperation and conflict, whereas e.g., Romania situates itself slightly above the midpoint of the scale the whole time (each violin shows a country's data between 1977-2015). 
 
-<img src="images/ViolinCentralEurope.png" alt="Violin Central Europe" width="800">
+<img src="images/ViolinCentralEurope.png" alt="Violin Central Europe" width="100%">
 
 &nbsp;
 
@@ -142,7 +144,7 @@ This is the result. It's interesting to see that of the bunch, and according to 
 Ok, so if you know the usual ways to simplify plots (e.g., those discussed by Stephen Few in [Solutions to the Problem of Over-Plotting in Graphs, 2008](http://mail.perceptualedge.com/articles/visual_business_intelligence/over-plotting_in_graphs.pdf)), here is another trick: using animations. In `R`, you can do this with package `gganimate`, and get something like this:
 
 
-<img src="images/Caribbean.gif" alt="Caribbean trends" width="800">
+<img src="images/Caribbean.gif" alt="Caribbean trends" width="100%">
 
 
 Not only does this solve the problem of including the yearly data in a way that's easier to take in, but we've also managed to map the 'event importance' measure onto the size of points! And all this without things looking ridiculously overcrowded. 
@@ -186,7 +188,7 @@ gganimate( p2, filename = "~/Desktop/EasternVsWesternAfrica.gif", ani.width = 12
 
 And you will get:
 
-<img src="images/EasternVsWesternAfrica.gif" alt="Eastern vs Western Africa trends" width="800">
+<img src="images/EasternVsWesternAfrica.gif" alt="Eastern vs Western Africa trends" width="100%">
 
 Ok, these are my current thoughts on how to tackle data with nested (years within countries) and crossed (countries between zones) variables. If you've been following up to this point, any comments and suggestions are welcome. By the way, all the work described here is [on Github](https://github.com/TheDataLabScotland/Data_Team_Blog_Posts/tree/master/HistoricalEventsData) too.
 
