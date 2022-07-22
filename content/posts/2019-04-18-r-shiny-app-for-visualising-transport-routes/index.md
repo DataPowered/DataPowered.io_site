@@ -15,7 +15,7 @@ featuredImage: "images/header.jpg"
 As part of [The Data Lab](https://www.thedatalab.com/), I worked on a project for visualising the traffic flow within a subsidised transport service, operated by a Scottish council. This visualisation needed to display variations in traffic flow conditional on factors such as the time of day, day of the week, journey purpose, as well as other criteria. The overall aim here was to explore and identify areas of particular activity, as well as provide some insight into how this transport service might be improved.
 
 <figure>
-    <img src='images/Caterina_CouncilTransport_ShinyApp_Tab1.png' alt='Landing tab' />
+    <img src='images/Caterina_CouncilTransport_ShinyApp_Tab1.png' alt='Landing tab' width="100%"/>
     <figcaption>Leaflet map (blurred): the thicker/'redder' the route, the more travelled it is.</figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ Given the richness of the data (collected across two years) and the multitude of
 
 
 <figure>
-    <img src='images/Caterina_CouncilTransport_ShinyApp_Tab2_large.png' alt='Data summaries' />
+    <img src='images/Caterina_CouncilTransport_ShinyApp_Tab2_large.png' alt='Data summaries' width="100%"/>
     <figcaption>Data summaries across all journeys</figcaption>
 </figure>
 
@@ -49,7 +49,7 @@ After these necessary preliminary steps (which are not part of the code linked b
 
 
 <figure>
-    <img src='images/Caterina_CouncilTransport_ShinyApp_Tab3_large.png' alt='Postcode networks' />
+    <img src='images/Caterina_CouncilTransport_ShinyApp_Tab3_large.png' alt='Postcode networks' width="100%"/>
     <figcaption>Network of postcodes.</figcaption>
 </figure>
 
