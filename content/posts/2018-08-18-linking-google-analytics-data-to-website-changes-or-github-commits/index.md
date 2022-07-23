@@ -48,7 +48,7 @@ You should get something of this nature:
  Once that is taken care of, you can also extract your git log in a format of your choice. Bring up a Terminal and type: 
 
 	
-{{< highlight console >}}
+{{< highlight bash >}}
 cd /my/website/repo/
 git log --pretty='format:"%an"~"%ai"~"%s"' > /my/path/Events.csv
 {{< / highlight >}}
@@ -57,7 +57,7 @@ What I've chosen to do above is structure my commit history into individual rows
 
 Alternatively, you can get rid of the timezone offset and request just local time, by following the code example below. For other types of information you can chain to the same query, check out [Devhints](https://devhints.io/git-log-format). 
 
-{{< highlight console >}}
+{{< highlight bash >}}
 git log --pretty='format:"%an"~"%ad"~"%s"' --date=local
 {{< / highlight >}}
 

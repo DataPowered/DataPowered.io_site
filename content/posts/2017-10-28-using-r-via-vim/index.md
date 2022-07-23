@@ -29,7 +29,7 @@ we can proceed to do the following in a Terminal:
 
 ## Using tmux
 
-```console
+```bash
 $ tmux 
 
 ```
@@ -61,13 +61,13 @@ Now, we're about to make things a little more interesting, and fire up `Vim` wit
 
 If you like, head over [here](https://www.youtube.com/watch?v=SI8TeVMX8pk) first to watch a `Vim` tutorial. Otherwise, you can start like so:
 
-```console
+```bash
 $ cd path/to/your/directory
 $ vim foo.R
 ```
 The code above either creates a foo.R file, or opens it if it already exists. Unless you're reusing `tmux` to split the view further into more panes, you can use `Vim` itself to open multiple files, and switch back and forth between them by typing `:n` or `:N`, which is useful for copying and pasting things across:
 
-```console
+```bash
 $ cd /path/to/some/files
 $ vim foo.R bar.R
 ```
@@ -82,7 +82,7 @@ Anyway, when opening a single file you should see something like this:
 
 ### Command mode
 
-`Vim` starts by default in **command mode** - and this is the mode we'll need if we want to send `R` code from our script to the console for execution. As the name suggests, this mode lets you tap into a variety of really handy `Vim` commands. 
+`Vim` starts by default in **command mode** - and this is the mode we'll need if we want to send `R` code from our script to the bash for execution. As the name suggests, this mode lets you tap into a variety of really handy `Vim` commands. 
 
 If you happen to be in any other mode, to revert back to this **command mode** you need to press `ESC` or `Ctrl + c`. Reverting to this mode is also really useful if you've made edits to your file in a different mode and want to undo them: returning in **command mode** you can undo things by pressing `u` (repeatedly, if necessary).
 
@@ -155,13 +155,13 @@ This mode is also very useful for copying/cutting and pasting tasks. To do this,
 
 ## `Nvim-R` commands
 
-I won't go into these in too much detail here because they are so nicely outlined in the Nvim-R manual [here](https://raw.githubusercontent.com/jalvesaq/Nvim-R/master/doc/Nvim-R.txt). However, have a bash at something like typing `\ll` to send a line of `R` code from `Vim` to the console.
+I won't go into these in too much detail here because they are so nicely outlined in the Nvim-R manual [here](https://raw.githubusercontent.com/jalvesaq/Nvim-R/master/doc/Nvim-R.txt). However, have a bash at something like typing `\ll` to send a line of `R` code from `Vim` to the bash.
 
-Importantly, if you send a command to the console which produces a lot of output, you might wonder why you can't scroll up to see all of it. To do this, you need to press `Ctrl + \` and then `Ctrl + n`.
+Importantly, if you send a command to the bash which produces a lot of output, you might wonder why you can't scroll up to see all of it. To do this, you need to press `Ctrl + \` and then `Ctrl + n`.
 
-A very nice touch is also that you can type into the console: `?data.frame` and a help pane will show up. If you place your cursor inside this pane, you can then close it with `q`.
+A very nice touch is also that you can type into the bash: `?data.frame` and a help pane will show up. If you place your cursor inside this pane, you can then close it with `q`.
 
-For plotting, if you type `plot( 1:10 )` into the `R` console, a pop-up will appear as well. See below:
+For plotting, if you type `plot( 1:10 )` into the `R` bash, a pop-up will appear as well. See below:
 
 <img src="images/R_via_Vim_4.png" alt="R_via_Vim_4" width="100%">
 

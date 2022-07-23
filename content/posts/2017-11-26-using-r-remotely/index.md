@@ -32,11 +32,11 @@ Remote desktop applications (like [VNC](https://www.realvnc.com/en/) or [Remmina
 
 This one refers to using a secure shell to log into the remote machine. However, all you get here by default is just that... the shell. You don't see anything other than a command line - so this can be a great option for those who are comfortable with that. Otherwise it might be easier to resort to an RDA. 
 
-I think `ssh`-ing is a lot more streamlined than dealing with a whole windowed desktop environment (as you would with the previous method). That said, there are downsides too - particularly if, like me, you're used to working in an IDE like [RStudio](https://www.rstudio.com/). The "basic" things that I appreciate about RStudio will be absent in a shell - such as having a pane for `R` scripts (to save and reuse) which is separate from the `R` console, or having a built-in graphics pane.
+I think `ssh`-ing is a lot more streamlined than dealing with a whole windowed desktop environment (as you would with the previous method). That said, there are downsides too - particularly if, like me, you're used to working in an IDE like [RStudio](https://www.rstudio.com/). The "basic" things that I appreciate about RStudio will be absent in a shell - such as having a pane for `R` scripts (to save and reuse) which is separate from the `R` bash, or having a built-in graphics pane.
 
 Regardless, in its simplest form, `ssh`-ing into a system would require this code in a Linux terminal:
 
-{{< highlight console "background = "black" " >}}
+{{< highlight bash "background = "black" " >}}
 $ ssh yourUserName@remoteAddress
 {{< / highlight >}}
 
@@ -46,14 +46,14 @@ $ ssh yourUserName@remoteAddress
 
 Not to worry though. There is one trick to get around `ssh` being _too_ stripped down. I'll stick with the RStudio example (since that's easiest for me): assuming you have RStudio installed on the remote system, you can start it up on the remote and have its window _forwarded_ onto your own local machine. This would simply show up as any other program you've got open locally. To achieve this, you'd need to supply one extra option in your `ssh` call (read [here](https://unix.stackexchange.com/questions/12755/how-to-forward-x-over-ssh-to-run-graphics-applications-remotely) for more details):
 
-{{< highlight console "background = "black" " >}}
+{{< highlight bash "background = "black" " >}}
 $ ssh -X yourUserName@remoteAddress
 $ rstudio
 {{< / highlight >}}
 
 Pretty neat, right? This way you can avoid running something like VNC when all you actually need is an instance of a single IDE. But there is a catch: depending on various parameters (e.g., your network, the type of cipher used to establish the secure connection), the forwarded window may be extremely slow to respond. In my case, it took forever to even scroll through a script in RStudio, so this could not be a long-term solution.Thankfully though, there are additional options we can add to the call to try and fix this:
 
-{{< highlight console "background = "black" " >}}
+{{< highlight bash "background = "black" " >}}
 $ ssh -XC yourUserName@remoteAddress
 {{< / highlight >}}
 
@@ -61,7 +61,7 @@ As before, the code above enables X11 forwarding, but at the same time ensures t
 
 If this is not enough, you can also try to switch to a different cipher - which is still secure (though opinions vary somewhat here), but faster than the default AES (according to [this source](http://xmodulo.com/how-to-speed-up-x11-forwarding-in-ssh.html)). To do this, you'd need to type:
 
-{{< highlight console "background = "black" " >}}
+{{< highlight bash "background = "black" " >}}
 $ ssh -XC -c blowfish-cbc yourUserName@remoteAddress
 {{< / highlight >}}
 
@@ -71,7 +71,7 @@ $ ssh -XC -c blowfish-cbc yourUserName@remoteAddress
 
 But what if you don't want X11 forwarding  enabled, for instance if the remote machine is not one you trust unreservedly (see [here](https://security.stackexchange.com/questions/14815/security-concerns-with-x11-forwarding) for risks)? Or perhaps if  the X11 option above is still too laggy despite compressing the image stream and changing the cipher? Well, in that case... I might have another solution for you: runing `R` via `Vim` (with the `Nvim-R` plugin) within your `ssh` shell - and all this with a helping hand from `tmux` too. 
 
-What does this mean? After `ssh`-ing in, by running `tmux` you will be able to split your Terminal window into separate panes - one of which I like to keep as an actual Terminal (just in case I end up needing to perform some file operations etc.). The other one can be used to start up Vim (powerful text / script editor) and display my `R` script in it. On typing `\rf` in Vim, that further splits the view to allow for a new pane - one in which an `R` session / console has started. So you'd end up with three panes this way, all in the same window: a Terminal, a script editor, and an `R` console. This may not be the same as running RStudio, but it comes pretty close. I've only just started exploring this option, but am really enjoying it so far! 
+What does this mean? After `ssh`-ing in, by running `tmux` you will be able to split your Terminal window into separate panes - one of which I like to keep as an actual Terminal (just in case I end up needing to perform some file operations etc.). The other one can be used to start up Vim (powerful text / script editor) and display my `R` script in it. On typing `\rf` in Vim, that further splits the view to allow for a new pane - one in which an `R` session / bash has started. So you'd end up with three panes this way, all in the same window: a Terminal, a script editor, and an `R` bash. This may not be the same as running RStudio, but it comes pretty close. I've only just started exploring this option, but am really enjoying it so far! 
 
 <br/>
 
