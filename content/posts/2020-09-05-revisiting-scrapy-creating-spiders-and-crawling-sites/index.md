@@ -12,7 +12,7 @@ featuredImage: "images/pexels-skyler-ewing-4808823.jpg"
 
 
 
-In my previous [post](https://datapowered.io/post/2020-04-14-getting-started-with-scrapy/) about Scrapy, we covered the basics of how to use CSS and XPath selectors to extract specific content from sites. We also looked at an introductory example for how to scrape a single page containing an e-shop's active offers and discounts. No crawling between pages was required for that simple example, and we used the `requests` library to make the introduction extra gentle. 
+In my previous [post](https://datapowered.io/posts/2020-04-14-getting-started-with-scrapy/) about Scrapy, we covered the basics of how to use CSS and XPath selectors to extract specific content from sites. We also looked at an introductory example for how to scrape a single page containing an e-shop's active offers and discounts. No crawling between pages was required for that simple example, and we used the `requests` library to make the introduction extra gentle. 
 
 In this post, I'll share a few details about how to create a Scrapy project, as well as spiders which can crawl between multiple webpages. We'll be able to achieve all this using just the `Scrapy` library as intended - without resorting to `requests`. We'll choose one page to start with, and build up the complexity from there.
  
