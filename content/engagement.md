@@ -6,7 +6,7 @@ title = "Public speaking"
 +++
 
 
-### Community engagement 
+## Community engagement 
 
 * Previously (end of 2015 - Nov 2019), I have organised the [EdinbR meetup](https://www.meetup.com/EdinbR/) (check out [the site](http://edinbr.org/) for details). EdinbR speakers during this time have included [Hadley Wickham](http://edinbr.org/edinbr/2016/05/11/may-Hadley-Update2-PostingTalk.html) and [David Robinson](http://edinbr.org/edinbr/2018/02/01/february-meeting-David-Robinson.html).
 * For my community engagement, data skills and commitment to data science work, I was awarded the New Talent [DataIQ award](https://www.dataiq.co.uk/articles/articles/dataiq-awards-2019---new-talent-caterina-constantinescu-data-scientist-the-data-lab) (July 2019)
@@ -15,7 +15,7 @@ title = "Public speaking"
 
 
 
-### Conference presentations & invited talks
+## Conference presentations & invited talks
 
 * _A beginner's guide to web scraping in Python_ - an introductory talk demonstrating how to use Scrapy on two example sites ([PyData Edinburgh Meetup](https://www.meetup.com/PyData-Edinburgh/events/271632481/), Jul 2020) - slides [here](https://github.com/pydataedinburgh/meetups/blob/master/meetup-2020-07-07-v/PyDataScrapyTalk.pdf)
 * _Putting the science back in data science_ - a talk on best practices for data collection, preparation and cleaning (Statistics group within Stirling University, Nov 2019)
@@ -31,7 +31,7 @@ title = "Public speaking"
 
 
 
-### Code demos
+## Code demos
 
 * [A swift introduction to interactive visualisations via R and Shiny](https://www.meetup.com/meetup-group-vBHbCmgh/events/259694171/) (Edinburgh Data Visualization Meetup, March 2019)
 * [Exploring transport routes, journey characteristics and postcode networks using R Shiny](http://edinbr.org/edinbr/2018/05/08/may-meeting.html) (EdinbR, May 2018)
@@ -39,7 +39,7 @@ title = "Public speaking"
 
 
 
-### Podcasts
+## Podcasts
 
 * [Podcast with John Mertic, Director of Program Management, Linux Foundation](https://open.spotify.com/show/4LXRYpbjennNM54Pwplmw1) (May 2019)
 * [The 'DataFest Special' podcast](https://thedatalab.podbean.com/e/the-datafest-special/): guest speaker discussing DataTech19 (Feb 2019)
