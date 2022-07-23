@@ -8,7 +8,7 @@ categories: ["data visualisation"]
 featuredImage: "images/Minard-1-e1562863679105.png"
 ---
 
-&nbsp;
+<br/>
 
 
 I've recently presented a toy Shiny app at the [Edinburgh Data Visualization Meetup](https://www.meetup.com/meetup-group-vBHbCmgh/events/259694171/) to demonstrate how Shiny can be used to explore data interactively.
@@ -18,7 +18,7 @@ In my code-assisted walkthrough, I began by discussing the data used: a set of r
 After a basic set of data manipulations using `data.table` in R (see code below for details), the data was ready to be visualised with `ggplot2`. It is at this stage that I can share my first tip for designing Shiny apps:
 
 
-&nbsp;
+<br/>
 
 ## Tip 1: Start small & build complexity iteratively
 
@@ -79,7 +79,7 @@ So, how can we move to Shiny from here? I won't go into the details here (which 
 
 However I will add several more tips that I have found very useful while developing Shiny apps - these range from usability issues, to efficiency and correct structure. As I've mentioned before, it can be really helpful to focus on these separately, once you've already determined what your outputs should in principle look like (when creating the static version of the plot):
 
-&nbsp;
+<br/>
 
 ## Tip 2: Decide whether to prioritise particular subsets of data using filters with default settings
 
@@ -87,13 +87,13 @@ Think about the initial state of the app: should the view contain full data? If 
 
 However, it is very important to note what happens when missing values exist: these would get filtered out automatically by input menus with specific options, but is this something you want handled in this way? Perhaps the cases excluded in this way might present interest along other dimensions where they might instead present complete data.
 
-&nbsp;
+<br/>
 
 ## Tip 3: Decide which objects (if any) should be shared across sessions
 
 How should the app handle multiple connected sessions? It might be a good idea to have larger data objects / constants visible across all connected sessions for efficiency. It is worth thinking about this in more detail and setting up your app according to [**Scoping**](http://rstudio.github.io/shiny/tutorial/#scoping) guidance.
 
-&nbsp;
+<br/>
 
 ## Tip 4: Beware of object dependencies
 
@@ -108,7 +108,7 @@ If you are curious about Black Friday sales, you can see the Shiny app in action
 
 The code controlling the app's behaviour can be found on GitHub [here](https://github.com/TheDataLabScotland/BlackFridayShinyApp/blob/master/app.R), whereas the deployed version is [here](https://thedatalab.shinyapps.io/BlackFridayShinyApp/).
 
-&nbsp;
+<br/>
 
 
 

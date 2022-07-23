@@ -8,7 +8,7 @@ categories: ["data visualisation"]
 featuredImage: "images/header.jpg"
 ---
 
-&nbsp;
+<br/>
 
 ## Project aims
 
@@ -19,12 +19,12 @@ As part of [The Data Lab](https://www.thedatalab.com/), I worked on a project fo
     <figcaption>Leaflet map (blurred): the thicker/'redder' the route, the more travelled it is.</figcaption>
 </figure>
 
-&nbsp;
+<br/>
 
 
 Given the richness of the data (collected across two years) and the multitude of (potential) influences on traffic volume, I created an interactive Shiny app. I then demoed the app at an [EdinbR meeting](http://edinbr.org/edinbr/2018/05/08/may-meeting.html). There it sparked a lot of interest and questions, so in the end it was decided to make the underlying R code widely available (however without the associated data - which we do not own) - see below for details.
 
-&nbsp;
+<br/>
 
 
 <figure>
@@ -33,7 +33,7 @@ Given the richness of the data (collected across two years) and the multitude of
 </figure>
 
 
-&nbsp;
+<br/>
 
 
 
@@ -53,7 +53,7 @@ After these necessary preliminary steps (which are not part of the code linked b
     <figcaption>Network of postcodes.</figcaption>
 </figure>
 
-&nbsp;
+<br/>
 
 
 

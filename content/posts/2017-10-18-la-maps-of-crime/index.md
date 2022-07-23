@@ -9,13 +9,13 @@ featuredImage: "images/dark_alleyway.jpg"
 ---
 
 
-&nbsp;
+<br/>
 
 I’ve recently come across [data.gov](https://catalog.data.gov/dataset?res_format=CSV) — a huge resource for open data. At the time of writing, there are close to 17,000 freely available datasets stored there, including [this one](https://catalog.data.gov/dataset/crime-data-from-2010-to-present) offered by the LAPD. Interestingly, this dataset includes almost 1.6M records of criminal activity occurring in LA since 2010 — all of them described according to a variety of measures (you can read about them [here](https://data.lacity.org/A-Safe-City/Crime-Data-from-2010-to-Present/y8tr-7khq)). 
 
 Using information like the date and time of a crime, its location (longitude & latitude), and the type of crime committed (among other things), you can come up with some pretty interesting visualizations. For this intro to plotting geographical data, I’ll be using `R` and showing you a gradual approach to building your graphs. Keep reading if you want to find out more!
 
-&nbsp;
+<br/>
 
 ## Packages and data
 
@@ -42,7 +42,7 @@ head( crime )
 {{< / highlight >}}
 
 
-&nbsp;
+<br/>
 
 ## Data cleaning
 
@@ -80,7 +80,7 @@ crime <- separate( crime, "MOCodes", into = paste( "MOCode", 1:10, sep = "_" ), 
 {{< / highlight >}}
 
 
-&nbsp;
+<br/>
 
 ## Getting a Google Map
 
@@ -94,7 +94,7 @@ map <- get_map( location = 'Los Angeles', zoom = 12, maptype = "roadmap" )
 
 
 
-&nbsp;
+<br/>
 
 ## Building `ggplot2` graphs incrementally
 
@@ -227,7 +227,7 @@ ggmap( map ) +
 
 
 
-&nbsp;
+<br/>
 
 ## Google Maps API: extracting locations for LA tourist attractions 
 

@@ -9,7 +9,7 @@ featuredImage: "images/header.png"
 ---
 
 
-&nbsp;
+<br/>
 
 Following my [previous post](https://datapowered.io/posts/2017-11-26-using-r-remotely/) on how to use `R` remotely, I thought I'd follow up with a slightly more in-depth description for how to use `R` via `vim`, and with `tmux`. This discussion will focus on how to get things working on Linux (Ubuntu) - which is what I am using.
 
@@ -25,7 +25,7 @@ After installing all three of these:
 we can proceed to do the following in a Terminal:
 
 
-&nbsp;
+<br/>
 
 ## Using tmux
 
@@ -34,7 +34,7 @@ $ tmux
 
 ```
 
-&nbsp;
+<br/>
 
 
 Press `Ctrl + B` as the default prefix for all `tmux` commands, let go, and then immediately type: `"`. You have about a 1-2 second window to press the next key after the prefix, for `tmux` to accept your command. Once you've done this, your view will split in two horizontally and your cursor will move to the second pane. 
@@ -54,7 +54,7 @@ If you've been following along, you should be seeing something like this:
 Now, we're about to make things a little more interesting, and fire up `Vim` with an `R` script on display.
 
 
-&nbsp;
+<br/>
 
 
 ## Using Vim with Nvim-R
@@ -72,13 +72,13 @@ $ cd /path/to/some/files
 $ vim foo.R bar.R
 ```
 
-&nbsp;
+<br/>
 
 Anyway, when opening a single file you should see something like this:
 
 <img src="images/R_via_Vim_2.png" alt="R_via_Vim_2" width="100%">
 
-&nbsp;
+<br/>
 
 ### Command mode
 
@@ -115,7 +115,7 @@ For text manipulations in this mode, you can use:
 * `d$` deletes everything between the the cursor and the end of the line, whereas `10dd` deletes 10 lines beneath the current line. 
 
 
-&nbsp;
+<br/>
 
 ### Insert mode
 
@@ -133,7 +133,7 @@ Here is a quick list of handy ones:
 
 * in a similar vein, `o` begins ('opens') a new line under your current one, and `O` does the same, but above your current line.
 
-&nbsp;
+<br/>
 
 ### Last-line mode
 
@@ -141,7 +141,7 @@ Last line mode: you can get this by typing `:`
 
 This is also the mode you need to be in to quit Vim , which can be done by typing: `:q`. If you've made changes to your document, Vim won't allow this. To proceed without saving the changes, you need to force the issue with: `:q!`. on the other hand, to save your changes and then quit, type: `:wq`. You can also save your progress with `:w` and then carry on working.
 
-&nbsp;
+<br/>
 
 ### Visual or visual-line mode
 
@@ -151,7 +151,7 @@ Careful here: in **visual mode**, `d` actually _cuts_ text for later pasting, ra
 
 This mode is also very useful for copying/cutting and pasting tasks. To do this, you can place your cursor on a given line and then enter **visual mode** as shown above. If you then press &uarr; or &darr;, the text selection will follow accordingly. When finished, type `y` (yank) to copy the text, and then paste it somewhere else with `p`.
 
-&nbsp;
+<br/>
 
 ## `Nvim-R` commands
 

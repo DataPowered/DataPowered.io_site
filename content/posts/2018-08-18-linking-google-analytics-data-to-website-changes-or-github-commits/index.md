@@ -9,9 +9,9 @@ featuredImage: "images/new-header.png"
 ---
 
 
-&nbsp;
+<br/>
 
-&nbsp;
+<br/>
 
 <a id="top"></a>
 
@@ -27,7 +27,7 @@ Take for instance the plot above: it gives a good overview of what was happening
 To get started, you'll need two things: to extract your history of commits (git log), and to download your Google Analytics data. Keep reading if you want more details on the entire process.
  
 
-&nbsp;
+<br/>
 
 
 ## Getting the data 
@@ -63,7 +63,7 @@ git log --pretty='format:"%an"~"%ad"~"%s"' --date=local
 
 
 
-&nbsp;
+<br/>
 
 
 
@@ -120,7 +120,7 @@ You've already seen a snippet of the Google Analytics data above. The GitHub log
 | CaterinaC | 2017-10-16 22:32:54 +0100 | Merge remote-tracking branch 'DataPowered.io_site/master' |
 
 
-&nbsp;
+<br/>
 
 
 ## Merging Google Analytics and GitHub commits
@@ -168,7 +168,7 @@ At this point, the joined / merged object `views_time_events` looks like so:
 <img src="images/JoinedGitHubCommitsWithGoogleAnalyticsData.png" alt="Data printscreen PNG" width="100%"/>
 
 
-&nbsp;
+<br/>
 
 
 
@@ -246,7 +246,7 @@ ggplot( data = views_time_events,
 You'll find the resulting plot at the <a href="#top">top of this post</a>.
 
 
-&nbsp;
+<br/>
 
 
 ## Going further

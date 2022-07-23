@@ -8,7 +8,7 @@ categories: ["data visualisation"]
 featuredImage: "images/antique-world-map.jpg"
 ---
 
-&nbsp;
+<br/>
 
 For this post, I've managed to find some extremely interesting historical event data offered by the [Cline Center](http://www.clinecenter.illinois.edu/) on [this page](http://www.clinecenter.illinois.edu/data/event/phoenix/ ). As you will see, this dataset can be quite challenging because of the sheer number of dimensions you could look at. With so many options, it becomes tricky to create visualisations  with the 'right' level of granularity: not so high-level that any interesting patterns are obscured, but not too detailed and overcrowded either. 
 
@@ -19,7 +19,7 @@ To quote the Cline Center's own description of this data, it:
 Of the three sources, below we'll explore the BBC dataset ("BBC Summary of World Broadcasts "), since it spans a fairly large period (1979 - 2015), and is also the largest among the three datasets offered. It can be downloaded [here](https://uofi.box.com/s/zp4mppzcpdvgs82rzwpme13xt6z4hq6j), and also comes with some metadata (in .csv format) presented [here](https://uofi.box.com/s/1ftwk1rt743ynl31voz37bmv23y6nrva). Finally, you can also check out the variable codebook [here](https://uofi.box.com/s/bmh9i39m6bf0vhnuebtf3ak3j6uxy2le).
 
 
-&nbsp;
+<br/>
 
 ## Overview of the data
 
@@ -30,7 +30,7 @@ Before we dive in, it's important to mention a few things about the structure of
 One thing you may notice, for instance, is that some characteristics of this dataset go against the set of data guidelines I've [previously recommended](http://datapowered.io/post/2017-10-18-post-data-guidelines/): e.g., the `source` and `target` variables do not contain atomic values, but rather string together multiple values, as well as some punctuation characters. This and various other issues had to be addressed before actually starting to look at the data. If you're interested, you can see my `R` code for this [at the bottom of this page](#DataCleaningAndManipulations).
 
 
-&nbsp;
+<br/>
 
 ## Finding a suitable level of granularity
 
@@ -69,7 +69,7 @@ two_level_aggregates[ , countryname := ordered( countryname, levels = correct_or
 {{< / highlight >}}
 
 
-&nbsp;
+<br/>
 
 ## Plotting the full data
 
@@ -100,7 +100,7 @@ And the caterpillar plot below is the result - with countries ordered within eac
 <img src="images/CaterpillarPlotByContinent.png" alt="Caterpillar Plot By Continent" width="100%">
 
 
-&nbsp;
+<br/>
 
 ## Plotting slices of data
 
@@ -137,7 +137,7 @@ This is the result. It's interesting to see that of the bunch, and according to 
 
 <img src="images/ViolinCentralEurope.png" alt="Violin Central Europe" width="100%">
 
-&nbsp;
+<br/>
 
 ## Using animations to map extra dimensions
 
@@ -193,7 +193,7 @@ And you will get:
 Ok, these are my current thoughts on how to tackle data with nested (years within countries) and crossed (countries between zones) variables. If you've been following up to this point, any comments and suggestions are welcome. By the way, all the work described here is [on Github](https://github.com/TheDataLabScotland/Data_Team_Blog_Posts/tree/master/HistoricalEventsData) too.
 
 
-&nbsp;
+<br/>
 
 ## Going further: Data cleaning & manipulations
 

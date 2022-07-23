@@ -9,7 +9,7 @@ featuredImage: "images/ssh-tutorial-how-does-ssh-work-imagecredit-wwwhostingerco
 ---
 
 
-&nbsp;
+<br/>
 
 
 Why would you need to do this? Say, for instance, you are dealing with sensitive data that should not leave a specific system, or quite simply that you are away on a work retreat - but your laptop is far less powerful than your work desktop computer which you left behind - so you want to keep using it from a distance. For such reasons, I've been looking into what options are available to log in remotely to a machine and run `R` there for some analysis. Below are some of the alternatives I've come across: 
@@ -20,13 +20,13 @@ Why would you need to do this? Say, for instance, you are dealing with sensitive
 * `R` used with `Vim` and `tmux`
 * Executing `R` code remotely from a local interface
 
-&nbsp;
+<br/>
 
 ## Remote desktop applications (RDAs)
 
 Remote desktop applications (like [VNC](https://www.realvnc.com/en/) or [Remmina](https://www.remmina.org/wp/) etc.) allow you to visualise another machine's desktop environment from afar. For example, if one day you are working from home, you can use an RDA from your home machine to log into, and use, your work machine. This would let you interact with its environment as though you were in front of the work machine's screen. I usually save this option for when I need access to a range of things from a remote system and could use a graphical interface, but since 99% of the time I only need access to `R` on a remote machine (and nothing else), I've drifted away from RDAs, personally.
 
-&nbsp;
+<br/>
 
 ## ssh 
 
@@ -40,7 +40,7 @@ Regardless, in its simplest form, `ssh`-ing into a system would require this cod
 $ ssh yourUserName@remoteAddress
 {{< / highlight >}}
 
-&nbsp;
+<br/>
 
 ## ssh with X11 forwarding
 
@@ -65,7 +65,7 @@ If this is not enough, you can also try to switch to a different cipher - which 
 $ ssh -XC -c blowfish-cbc yourUserName@remoteAddress
 {{< / highlight >}}
 
-&nbsp;
+<br/>
 
 ## Teaming up R, Vim and tmux
 
@@ -73,7 +73,7 @@ But what if you don't want X11 forwarding  enabled, for instance if the remote m
 
 What does this mean? After `ssh`-ing in, by running `tmux` you will be able to split your Terminal window into separate panes - one of which I like to keep as an actual Terminal (just in case I end up needing to perform some file operations etc.). The other one can be used to start up Vim (powerful text / script editor) and display my `R` script in it. On typing `\rf` in Vim, that further splits the view to allow for a new pane - one in which an `R` session / console has started. So you'd end up with three panes this way, all in the same window: a Terminal, a script editor, and an `R` console. This may not be the same as running RStudio, but it comes pretty close. I've only just started exploring this option, but am really enjoying it so far! 
 
-&nbsp;
+<br/>
 
 ## Viewing RStudio locally, but sending code remotely for execution
 

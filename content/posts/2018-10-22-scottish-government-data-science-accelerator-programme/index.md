@@ -8,7 +8,7 @@ categories: ["misc"]
 featuredImage: "images/header-GlobalBurdenOfDisease.png"
 ---
 
-&nbsp;
+<br/>
 
 ## The Accelerator programme
 
@@ -24,7 +24,7 @@ To understand this data, we need to focus on two key concepts / measures: the **
 
 <img src="images/GlobalBurdenOfDisease.png" alt="Global Burden of Disease visualisation, The Institute for Health Metrics and Evaluation" width="100%"/>
 
-&nbsp;
+<br/>
 
 ## The learning experience
 
