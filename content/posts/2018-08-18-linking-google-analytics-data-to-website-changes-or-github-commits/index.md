@@ -1,11 +1,11 @@
 ---
 title: "Linking Google Analytics data to website changes or GitHub commits"
 date: 2018-08-18
-lastmod: 2018-08-18
+lastmod: 2022-07-23
 draft: false
 tags: ["R", "Google Analytics", "GitHub"]
 categories: ["misc"]
-featuredImage: "images/google-analytics-nameG-1920-800x450-imagecredit-martech-org.png"
+featuredImage: "images/new-header.png"
 ---
 
 

@@ -1,11 +1,11 @@
 ---
-title: "Four tips for designing interactive visualisations with Shiny"
+title: "Four tips for designing visualisations in Shiny"
 date: 2019-04-30
 lastmod: 2022-07-22
 draft: false
 tags: ["R", "ggplot2", "Shiny", "Kaggle"]
 categories: ["data visualisation"]
-featuredImage: "images/header-imagecredit-RGraphGallery.png"
+featuredImage: "images/Minard-1-e1562863679105.png"
 ---
 
 &nbsp;
