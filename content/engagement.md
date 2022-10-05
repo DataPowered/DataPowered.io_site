@@ -19,6 +19,7 @@ title = "Public speaking"
 
 | Date | Title / Topic | Group | Event | Video | Slides |
 |---|---|---|---|---|---|
+| 2022-10 | Journey through a landscape of options: Choosing among web app frameworks for your project | JumpingRivers / Shiny in Production | [Conference](https://shiny-in-production.jumpingrivers.com/) | - | [Slides](https://github.com/DataPowered/DataPowered.io_site/blob/master/content/slides/20221007_ShinyInProduction.pdf) |
 | 2021-01 | Speeding up your Shiny App | North East Data Scientists | [Meetup](https://www.meetup.com/newcastle-upon-tyne-data-science-meetup/events/274337760/) | - | - |
 | 2020-10 | Data Validation in R: From Principles to Tools and Packages | New York Open Statistical Programming Meetup | [Meetup](https://www.meetup.com/nyhackr/events/273775979/) | [YouTube](https://www.youtube.com/watch?v=0d1c-8yw6Tk) | [Link](https://nyhackr.blob.core.windows.net/presentations/Data_Validation-Caterina_Constantinescu.pdf) |
 | 2020-07 | A beginner's guide to web scraping in Python | PyData Edinburgh Meetup | [Meetup](https://www.meetup.com/PyData-Edinburgh/events/271632481/) | - | [Link](https://github.com/pydataedinburgh/meetups/blob/master/meetup-2020-07-07-v/PyDataScrapyTalk.pdf) |
