@@ -100,7 +100,7 @@ enableEmoji = true
     [params.home.profile]
       enable = true
       title = "Welcome!"
-      subtitle = "Homepage & blog of Dr Caterina Constantinescu | Data science enthusiast & curiosity-driven self-starter"
+      subtitle = "Homepage & blog of Dr Caterina Constantinescu | Data professional. Psychologist. Paying close attention."
       typeit = false
       avatarURL = "/images/its_a_me.jpg"
       social = true

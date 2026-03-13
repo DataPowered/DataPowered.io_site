@@ -1,5 +1,5 @@
 +++
-date = "2022-07-23"
+date = "2026-03-13"
 draft = false
 title = "About me"
 +++
@@ -18,6 +18,8 @@ I enjoy public speaking and have also been heavily involved with community event
 ## Background
 
 Prior, my academic background is in psychology, emotion and research methods, and includes a PhD in Psychology awarded by The University of Edinburgh with no corrections. My doctoral research investigated if various emotion-generating stimuli used in lab settings (including VR & at the time, the recently launched [Oculus Rift DK1](https://vr-compare.com/headset/oculusriftdk1)) could approximate emotional states occurring in daily life, as measured using a bespoke [Android phone app](https://github.com/CaterinaC/Android_App). As part of my doctoral research I also tested if [model-based cluster analysis](https://cran.r-project.org/web/packages/mclust/vignettes/mclust.html) can serve as a computational model for how humans create (fuzzy) emotional categories.
+
+<br>
 
 ### Publications
 
