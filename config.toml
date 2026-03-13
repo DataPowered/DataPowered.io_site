@@ -30,7 +30,7 @@ enableEmoji = true
 # Author config
 [author]
   name = "Caterina"
-  email = "info@datapowered.io"
+  email = "caterina@softuniverse.com"
   link = "https://datapowered.io/"
   
 [params]
@@ -113,7 +113,7 @@ enableEmoji = true
     GitHub = "CaterinaC"
     Twitter = "c__constantine"
     LinkedIn = "caterina-constantinescu"
-    Email = "info@datapowered.io"
+    Email = "caterina@softuniverse.com"
     Stackoverflow = "4709730/lexconstantine"
     RSS = "10"
 

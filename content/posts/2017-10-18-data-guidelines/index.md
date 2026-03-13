@@ -34,7 +34,7 @@ Here are some of my ideas for how to improve (or even prevent) messy data. This 
 | 10 	| For dates, the same convention should be used consistently and mentioned in the data codebook. 	|  	| If the format ‘dd/mm/yyyy’ is preferred, this should be maintainted everywhere within the date variable, without cases such as ‘mm/dd/yyyy’, or ‘dd-mm-yyyy’ ever occurring. 	|
 | 11 	| Use spelling and capitalisation consistently within columns. 	|  	| In a ‘Gender’ variable, values could be coded as either 0 and 1 (with the explanation provided in the database codebook for which is female and which is male), or if the genders are typed in as words, then ‘male’ should not get mixed with ‘Male’ etc.  	|
 
-As I've said above, I'd be really interested in getting feedback on this, based on other people's experiences with messy data. You can let me know your thoughts in the comment section below, or [email](mailto:info@datapowered.io) me. 
+As I've said above, I'd be really interested in getting feedback on this, based on other people's experiences with messy data. You can let me know your thoughts in the comment section below, or [email](mailto:caterina@softuniverse.com) me. 
 
 
 > This content was first published on [The Data Team @ The Data Lab blog](https://thedatateam.silvrback.com/data-guidelines).
