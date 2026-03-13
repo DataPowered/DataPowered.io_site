@@ -100,7 +100,7 @@ enableEmoji = true
     [params.home.profile]
       enable = true
       title = "Welcome!"
-      subtitle = "This is the homepage and blog of Dr Caterina Constantinescu, Principal Data Consultant @ GlobalLogic."
+      subtitle = "Homepage & blog of Dr Caterina Constantinescu | Data science enthusiast & curiosity-driven self-starter"
       typeit = false
       avatarURL = "/images/its_a_me.jpg"
       social = true
