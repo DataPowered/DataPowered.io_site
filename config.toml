@@ -11,7 +11,6 @@ title = "DataPowered.io"
 # default amount of posts in each pages
 paginate = 12
 # google analytics code
-googleAnalytics = "G-7TYZ4Z9G2F"
 googleAnalyticsID = "G-7TYZ4Z9G2F" # new GA4 code
 # copyright description used only for seo schema
 copyright = ""
