@@ -10,8 +10,6 @@ hasCJKLanguage = false
 title = "DataPowered.io"
 # default amount of posts in each pages
 paginate = 12
-# copyright description used only for seo schema
-copyright = ""
 # whether to use robots.txt
 enableRobotsTXT = true
 # whether to use git commit log
@@ -19,17 +17,12 @@ enableGitInfo = false
 # whether to use emoji code
 enableEmoji = true
 
-
-# Allows HTML in Markdown content files
-[markup.goldmark.renderer]
-  unsafe = true
-
 # Author config
 [author]
   name = "Caterina"
   email = "caterina@softuniverse.com"
   link = "https://datapowered.io/"
-  
+
 [params]
   title = " DataPowered"
   description = "Homepage and blog of Dr Caterina Constantinescu"
@@ -41,8 +34,15 @@ enableEmoji = true
   dateFormat = "2006-01-02"
   # website images for Open Graph and Twitter Cards
   images = ["/images/logo_og.jpg"]
-  # google analytics code
-  googleAnalyticsID = "G-7TYZ4Z9G2F" # new GA4 code
+
+  # Analytics config
+  [params.analytics]
+    enable = true
+    # Google Analytics
+    [params.analytics.google]
+      id = "G-7TYZ4Z9G2F"
+      # whether to anonymize IP
+      anonymizeIP = true
 
   [params.header]
     # desktop header mode ["fixed", "normal", "auto"]
@@ -202,4 +202,9 @@ enableEmoji = true
   [markup.highlight]
     # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
     noClasses = false
+  # Goldmark is from Hugo 0.60 the default library used for Markdown
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      # whether to use HTML tags directly in the document
+      unsafe = true
 
