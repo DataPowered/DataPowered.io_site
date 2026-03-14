@@ -12,7 +12,7 @@ It has been quite a few years since my last post. So much has changed in the wor
 
 While I was silent on this blog, my career path was actually following the inescapable gravitational pull of AI, such that I found myself working on large-scale projects side by side with an LLMOps team, and then an Observability team supporting an AI platform build. 
 
-The LLM research I needed to do at the time got repurposed into some public speaking engagements (you can find those [here](https://datapowered.io/engagement/)), but they all focused on _technical_ aspects or explanations. Underneath that, my subjective perspective was that the hype will fade eventually and LLMs will be swapped in favour of a different paradigm altogether (something which Yann LeCun is now [pursuing](https://amilabs.xyz/) for example - so we get to see how that pans out as well).
+The LLM research I needed to do at the time got repurposed into some public speaking engagements (you can find those [here](https://datapowered.io/engagement/)), but they all focused on _technical_ aspects or explanations. Underneath that, my subjective perspective was that the hype will fade eventually and LLMs will be swapped out in favour of a different paradigm altogether (something which Yann LeCun is now [pursuing](https://amilabs.xyz/) for example - so we get to see how that pans out as well).
 
 However... I have had a change of heart lately, after interacting at length with Anthropic's Claude - who in 2026 needs no introduction[^1]. At this point, I have to take back my previous opinions: LLMs and AI (even without a paradigm shift) **are** here to stay and **will** change the world. 
 
