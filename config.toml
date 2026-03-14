@@ -44,6 +44,10 @@ enableEmoji = true
       # whether to anonymize IP
       anonymizeIP = true
 
+  # Site verification code for Google/Bing/Yandex/Pinterest/Baidu
+  [params.verification]
+    google = "jzqCGS9S6Y6uovCncyikSjth2V2caNKmt08pFEt-T04"
+
   [params.header]
     # desktop header mode ["fixed", "normal", "auto"]
     desktopMode = "fixed"
@@ -136,7 +140,10 @@ enableEmoji = true
   [params.app]
     noFavicon = false
 
+  # Page config
   [params.page]
+    # whether to use lightgallery
+    lightgallery = false
     # Comment config
     [params.page.comment]
       enable = true
