@@ -10,8 +10,6 @@ hasCJKLanguage = false
 title = "DataPowered.io"
 # default amount of posts in each pages
 paginate = 12
-# google analytics code
-googleAnalyticsID = "G-7TYZ4Z9G2F" # new GA4 code
 # copyright description used only for seo schema
 copyright = ""
 # whether to use robots.txt
@@ -42,7 +40,9 @@ enableEmoji = true
   fingerprint = ""
   dateFormat = "2006-01-02"
   # website images for Open Graph and Twitter Cards
-  images = ["/images/logo_og.jpg"] 
+  images = ["/images/logo_og.jpg"]
+  # google analytics code
+  googleAnalyticsID = "G-7TYZ4Z9G2F" # new GA4 code
 
   [params.header]
     # desktop header mode ["fixed", "normal", "auto"]
