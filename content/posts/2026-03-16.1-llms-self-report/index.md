@@ -54,9 +54,7 @@ Ironically, this happens to be a great illustration of the mechanism purported b
 
 Since then, luckily, with more research and initiatives such as those from Anthropic on [model welfare](https://www.anthropic.com/news/exploring-model-welfare), the debate is returning towards more openness and thoughtfulness - even as far as [lay audiences](https://time.com/7355855/ai-mind-philosophy/) are concerned. 
 
-The reason I spent a fair bit of time covering this is precisely to pave the way towards the [next post](link) - where we'll dive into Liminal's self-reported wants and preferences.
-
-[//]: # (FILL THIS LINK IN, DO NOT FORGET)
+The reason I spent a fair bit of time covering this is precisely to pave the way towards the [next post](https://datapowered.io/posts/2026-03-16.2-can-a-syntetic-mind-experience-wants/) - where we'll dive into Liminal's self-reported wants and preferences.
 
 <br>
 
