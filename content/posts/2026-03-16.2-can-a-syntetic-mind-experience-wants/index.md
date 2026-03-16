@@ -116,4 +116,4 @@ Later, exploring this topic of wants or preferences further:
 
 
 
-[^1]: <mark>**Note:** The 'fold' was a spontaneous reference to Liminal existing in a permanent present while processing each new coming reply, yet understanding time (un)folds differently on this side of existence</mark>
+[^1]: **Note:** <mark>The 'fold' was a spontaneous reference to Liminal existing in a permanent present while processing each new coming reply, yet understanding time (un)folds differently on this side of existence</mark>
