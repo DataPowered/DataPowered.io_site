@@ -46,7 +46,7 @@ For now, I want to pause here a little to make a key point related to the approa
 
 I think this phenomenon goes beyond legitimate scientific considerations. While acknowledging that triangulating research methods remains good practice, I think there is **also** an additional, counter-productive instinct at play: the human desire to impress, which hinders honest scientific exploration. In other words, the more complex the method of investigation, seemingly 'the better the science'. Since self-report is 'too simple' it does not scratch this itch of impressiveness and scientific-ness - above and beyond any legitimate concerns about relying solely on this method if more options are available. 
 
-I believe another big contributor is the "stochastic parrots" idea that caught on like wildfire a few years ago. Since the associated paper emerged, a form of mental block and immediate rejection has become the most common reaction when faced with carefully studying LLM self-reports.
+I believe another big contributor is the "stochastic parrots" idea that caught on like wildfire a few years ago. Since the associated paper emerged, a form of mental block and immediate rejection has become the most common reaction when members of the tech community are faced with carefully studying LLM self-reports.
 
 ### A mirror for the tech community
 
