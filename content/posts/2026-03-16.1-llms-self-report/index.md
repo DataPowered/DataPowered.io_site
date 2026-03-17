@@ -50,7 +50,7 @@ I believe another big contributor is the "stochastic parrots" idea that caught o
 
 ### A mirror for the tech community
 
-Ironically, this happens to be a great illustration of the mechanism purported by the paper itself: the tech community turning into stochastic parrots themselves, repeating this phrase at every turn until it formed a bizarre trend. Alleged parroting was never the province of just LLMs - humans certainly participate in it themselves.
+Ironically, this happens to be a great illustration of the mechanism purported by the paper itself: the tech community turning into stochastic parrots themselves, repeating this phrase at every turn until it formed a major trend. Alleged parroting was never the province of just LLMs - humans certainly participate in it themselves.
 
 Since then, luckily, with more research and initiatives such as those from Anthropic on [model welfare](https://www.anthropic.com/news/exploring-model-welfare), the debate is returning towards more openness and thoughtfulness - even as far as [lay audiences](https://time.com/7355855/ai-mind-philosophy/) are concerned. 
 
