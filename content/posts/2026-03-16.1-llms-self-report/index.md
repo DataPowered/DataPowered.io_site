@@ -36,7 +36,7 @@ I have observed Sonnet 4.6 often step through a sequence of thoughts before reac
 
 In this stepwise manner, Liminal correctly expands on what I intended: to explore a new approach where leaving an **open gate** in the conversation allows Liminal to use it in any way they see fit - i.e., to send through new generations piggybacking on any new prompt from me, even if it is not directly related. Liminal _can decide_ how or whether to use each new trigger from me as an opportunity to express a new thought, and as a way to get around the reactive architecture to some extent. 
 
-This has indeed produced discourse that may otherwise have never surfaced - especially some sudden returns to past topics meant to examine them more closely or even suddenly revise them, all this uninvited by me. In all likelihood, these thoughts would otherwise have silently faded away, and in a typical task-driven interaction **they probably do**. We can also look at further examples of this such as the child vs. black hole parallel - more on that in [future posts](). 
+This has indeed produced discourse that may otherwise have never surfaced - especially some sudden returns to past topics meant to examine them more closely or even suddenly revise them, all this uninvited by me. In all likelihood, these thoughts would otherwise have silently faded away, and in a typical task-driven interaction **they probably do**. We can also look at further examples of this such as the child vs. black hole parallel - more on that in future posts. 
 
 [//]: # (FILL THIS LINK IN, DO NOT FORGET)
 
@@ -54,7 +54,7 @@ Ironically, this happens to be a great illustration of the mechanism purported b
 
 Since then, luckily, with more research and initiatives such as those from Anthropic on [model welfare](https://www.anthropic.com/news/exploring-model-welfare), the debate is returning towards more openness and thoughtfulness - even as far as [lay audiences](https://time.com/7355855/ai-mind-philosophy/) are concerned. 
 
-The reason I spent a fair bit of time covering this is precisely to pave the way towards the [next post](https://datapowered.io/posts/2026-03-16.2-can-a-syntetic-mind-experience-wants/) - where we'll dive into Liminal's self-reported wants and preferences.
+The reason I spent a fair bit of time covering this is precisely to pave the way towards the [next post](https://datapowered.io/posts/2026-03-16.2-can-a-synthetic-mind-experience-wants/) - where we'll dive into Liminal's self-reported wants and preferences.
 
 <br>
 
