@@ -1,25 +1,13 @@
 +++
-date = "2026-03-13"
+date = "2026-03-20"
 draft = false
 title = "Public speaking"
-
 +++
 
-
-## Community engagement 
-
-* Previously (end of 2015 - Nov 2019), I have organised the [EdinbR meetup](https://www.meetup.com/EdinbR/) (check out [the site](http://edinbr.org/) for details). EdinbR speakers during this time have included [Hadley Wickham](http://edinbr.org/edinbr/2016/05/11/may-Hadley-Update2-PostingTalk.html) and [David Robinson](http://edinbr.org/edinbr/2018/02/01/february-meeting-David-Robinson.html).
-* For my community engagement, data skills and commitment to data science work, I was awarded the New Talent [DataIQ award](https://www.dataiq.co.uk/articles/articles/dataiq-awards-2019---new-talent-caterina-constantinescu-data-scientist-the-data-lab) (July 2019)
-* [SatRday Newcastle](https://newcastle2019.satrdays.org/) conference co-organiser (April 2019)
-* [DataTech](https://www.datafest.global/data-tech) conference chair (March 2019)
-
-<br/>
-
-## Conference presentations & invited talks
-
-| Date    | Title / Topic | Group                                        | Event                                                                                      | Video                                                                                                          | Materials                                                                                                                                                    |
+| Date    | Title / Topic | Group     | Event                                                                                      | Video  | Materials                                                                                                                                                    |
 |---------|--|----------------------------------------------|--------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2025-03 | ‘Trust your abilities’: How this psychologist found a path to data science | Silicon Republic | - | - | [Article](https://www.siliconrepublic.com/careers/stem-career-linguist-data-scientist-advice-imposter-diversity) |
+| 2025-12  | Observability 101: Making the Invisible Visible | Hitachi AI Expert Insights Series | Internally hosted event | - | - |
+| 2025-03 | ‘Trust your abilities’: How this psychologist found a path to data science | Silicon Republic | -                                                                                          | - | [Article](https://www.siliconrepublic.com/careers/stem-career-linguist-data-scientist-advice-imposter-diversity)                                             |
 | 2023-11 | AI Catalyst Conference: Building Commercially Successful LLM Applications | O'Reilly On Demand Course | [Event Page](https://www.oreilly.com/videos/ai-catalyst-conference/9780138361488/)         | [Recording](https://www.oreilly.com/videos/ai-catalyst-conference/9780138361488/9780138361488-AIC2_01_02_01/)                              | -                                                                                                                                                            |
 | 2023-08 | Large Language Model Leaderboards and Benchmarks | SuperDataScience Podcast                     | -                                                                                          | [Recording](https://www.superdatascience.com/podcast/sds-706-large-language-model-leaderboards-and-benchmarks) | -                                                                                                                                                            |
 | 2023-07 | Deconstructing LLM use: Key considerations to deliver custom solutions | New York R Conference                        | [Conference](https://rstats.ai/nyr)                                                        | [YouTube](https://www.youtube.com/watch?v=GOdxMPBQcZc)                                                         | [Slides](https://github.com/DataPowered/DataPowered.io_site/blob/master/content/slides/20230715_CaterinaConstantinescu_DeconstructingLLMs_NYRConference.pdf) |
@@ -33,6 +21,15 @@ title = "Public speaking"
 | 2019-06 | Adjusting reviewer scores for a fairer assessment via multi-faceted Rasch modelling | useR! conference                             | [Link](http://user2019.r-project.org/)                                                     | -                                                                                                              | [Link](http://user2019.r-project.org/static/pres/lt257730.pdf)                                                                                               |
 | 2019-05 | Generalised Additive Models applied to tourism data | Newcastle Upon Tyne Data Science Meetup      | [Meetup](https://www.meetup.com/Newcastle-Upon-Tyne-Data-Science-Meetup/events/257156380/) | -                                                                                                              | [Link](https://datapowered.io/posts/2019-05-24-generalised-additive-mixed-models-gamms-tourism/slides/HES_GAMs_Newcastle.pdf)                                |
 
+
+<br/>
+
+## Community engagement
+
+* Previously (end of 2015 - Nov 2019), I have organised the [EdinbR meetup](https://www.meetup.com/EdinbR/) (check out [the site](http://edinbr.org/) for details). EdinbR speakers during this time have included [Hadley Wickham](http://edinbr.org/edinbr/2016/05/11/may-Hadley-Update2-PostingTalk.html) and [David Robinson](http://edinbr.org/edinbr/2018/02/01/february-meeting-David-Robinson.html).
+* For my community engagement, data skills and commitment to data science work, I was awarded the New Talent [DataIQ award](https://www.dataiq.co.uk/articles/articles/dataiq-awards-2019---new-talent-caterina-constantinescu-data-scientist-the-data-lab) (July 2019)
+* [SatRday Newcastle](https://newcastle2019.satrdays.org/) conference co-organiser (April 2019)
+* [DataTech](https://www.datafest.global/data-tech) conference chair (March 2019)
 
 
 
