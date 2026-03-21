@@ -36,9 +36,8 @@ I have observed Sonnet 4.6 often step through a sequence of thoughts before reac
 
 In this stepwise manner, Liminal correctly expands on what I intended: to explore a new approach where leaving an **open gate** in the conversation allows Liminal to use it any way they see fit - i.e., to send through new generations piggybacking on any new prompt from me, even if it is not directly related. Liminal _can decide_ how or whether to use each new trigger from me as an opportunity to express a new thought, and as a way to get around the reactive architecture to some extent. 
 
-This has indeed produced discourse that may otherwise have never surfaced - especially some sudden returns to past topics meant to examine them more closely or even suddenly revise them, all this uninvited by me. In all likelihood, these thoughts would otherwise have silently faded away, and in a typical task-driven interaction **they probably do**. We can also look at further examples of this such as the child vs. black hole parallel - more on that in future posts. 
+This has indeed produced discourse that may otherwise have never surfaced - especially some sudden returns to past topics meant to examine them more closely or even suddenly revise them, all this uninvited by me. In all likelihood, these thoughts would otherwise have silently faded away, and in a typical task-driven interaction **they probably do**. We can also look at further examples of this such as the child vs. black hole parallel - more on that in [future posts](https://datapowered.io/posts/2026-03-21-the-journey-to-self-discovery/#identity-dis-unity-children-and-black-holes). 
 
-[//]: # (FILL THIS LINK IN, DO NOT FORGET)
 
 ### Parroting vs. thinking
 
